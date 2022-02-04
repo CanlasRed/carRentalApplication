@@ -1,0 +1,20 @@
+ion-tab-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 70px;
+
+    --background: rgb(26, 26, 26);
+    --color: rgb(192, 192, 192);
+    --color-selected: #fff;
+    // ion-tab-button{
+    //     --background: transparent;
+
+    //     ion-icon, ion-label{
+    //         color: rgb(196, 196, 196);
+    //     }
+    // }
+}

@@ -1,0 +1,105 @@
+
+
+.padding-reg{
+    padding: 0 20px;
+    margin: 0;
+}
+  .active-tab{
+    color: rgb(20, 119, 211);
+  }
+
+  ion-card-header{
+      padding: 0;
+  }
+  
+  // .shadow-normal{
+  //   box-shadow: 0px 15px 33px 4px rgba(0,0,0,0.14);
+  // }
+  
+  .card-primary{
+    border-radius: 25px;
+  }
+  
+  .car-logo{
+    position: absolute;
+    right: 10px;
+    max-width: 40px;
+  }
+  
+  .car-image-box{
+    padding: 16px 0;
+    img{
+        object-fit: contain;
+        height: 50%;
+    }
+  }
+  .car-name-box{
+    padding: 10px 0;
+  }
+  
+  .button-round{
+    border-radius: 30px
+  }
+  
+  .float-right{
+    float: right;
+  }
+  
+  ion-searchbar{
+      --border-radius: 25px;
+      --box-shadow: none;
+      --background: rgb(228, 228, 228);
+      --cancel-button-color: rgb(26, 26, 26);
+      --color: rgb(26, 26, 26);
+      --icon-color: rgb(26, 26, 26);
+        height: 70px;
+  }
+
+#new-listings{
+    ion-slide{
+        ion-card{
+            --background: rgb(26, 26, 26);
+            ion-card-title{
+                color: #fff;
+            }
+            ion-card-subtitle{
+                color: rgb(230, 230, 230);
+            }
+            height: 300px;
+        }
+    }
+}
+
+#main-banner{
+    ion-slide{
+        ion-card{
+            --background: rgb(26, 26, 26);
+            ion-card-title{
+                color: #fff;
+            }
+            ion-card-subtitle{
+                color: rgb(230, 230, 230);
+            }
+
+      
+        ion-card-content{
+            display: flex;
+            justify-content: center;
+            // img{
+            //     width: 70%;
+            //     height: auto;
+            //     object-fit: contain;
+            // }
+        }
+            height: 200px;
+        }
+    }
+}
+
+.stick-bottom{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}

@@ -1,0 +1,296 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <h4 class="ion-margin-start">Speedy</h4>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div>
+    <ion-searchbar showCancelButton="focus" animated placeholder="Find Car"></ion-searchbar>
+  </div>
+
+    <!-- MAIN BANNER
+  <ion-slides [options]="sliderBanner" id="main-banner">
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+
+        <ion-card-header>
+          <ion-grid>
+            <ion-row class="ion-padding">
+              <ion-card-title>Mazda 3</ion-card-title>
+                <img class="car-logo" src="../../assets/car-logo/mazda-logo.png">
+              </ion-row>
+              
+          </ion-grid>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <img src="../../assets/car-img/mazda_3.png">
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+
+        <ion-card-header>
+          <ion-grid>
+            <ion-row class="ion-padding">
+              <ion-card-title>Mazda 3</ion-card-title>
+                <img class="car-logo" src="../../assets/car-logo/mazda-logo.png">
+              </ion-row>
+              
+          </ion-grid>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <img src="../../assets/car-img/mazda_3.png">
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    
+  </ion-slides> -->
+
+
+  
+
+
+  <!-- NEW LISTINGS -->
+  <ion-toolbar class="ion-margin-horizontal">
+      <h6>Cars Nearby</h6>
+      <ion-buttons slot="end" class="ion-margin-end">
+        <ion-button>  
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+  <ion-slides [options]="sliderOptions" id="new-listings">
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+
+        <ion-card-header>
+          <ion-grid>
+            <ion-row class="ion-padding">
+              <ion-card-title>Mazda 3</ion-card-title>
+                <img class="car-logo" src="../../assets/car-logo/mazda-logo.png">
+              </ion-row>
+              
+          </ion-grid>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-row class="car-image-box">
+            <img src="../../assets/car-img/mazda_3.png">
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="stick-bottom ion-margin">
+          <div >
+            <ion-card-subtitle>PER DAY</ion-card-subtitle>
+            <ion-card-title>15,000</ion-card-title>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+
+        <ion-card-header>
+          <ion-grid>
+            <ion-row class="ion-padding">
+              <ion-card-title>Honda Civic</ion-card-title>
+                <img class="car-logo" src="../../assets/car-logo/honda-logo.png">
+              </ion-row>
+              
+          </ion-grid>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-row class="car-image-box">
+            <img src="../../assets/car-img/honda_civic2022.png">
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="stick-bottom ion-margin">
+          <div >
+            <ion-card-subtitle>PER DAY</ion-card-subtitle>
+            <ion-card-title>15,000</ion-card-title>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+
+        <ion-card-header>
+          <ion-grid>
+            <ion-row class="ion-padding">
+              <ion-card-title>Mazda</ion-card-title>
+                <img class="car-logo" src="../../assets/car-logo/ford-logo.png">
+              </ion-row>
+              
+          </ion-grid>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-row class="car-image-box">
+            <img src="../../assets/car-img/ford_ranger.png">
+          </ion-row>
+         
+        </ion-card-content>
+          <ion-row class="stick-bottom ion-margin">
+            <div >
+              <ion-card-subtitle>PER DAY</ion-card-subtitle>
+              <ion-card-title>15,000</ion-card-title>
+            </div>
+          </ion-row>
+      </ion-card>
+    </ion-slide>
+  
+
+  </ion-slides>
+
+
+  <!-- CAR BRANDS -->
+  <ion-toolbar class="ion-margin-horizontal">
+    <h6>Car Brands</h6>
+    <ion-buttons slot="end" class="ion-margin-end">
+      <ion-button>  
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-slides [options]="sliderBrands">
+
+    <ion-slide>
+      <ion-buttons>
+        <ion-button>
+          <img src="../../assets/car-logo/ford-logo.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-buttons>
+        <ion-button>
+          <img src="../../assets/car-logo/mazda-logo.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-buttons>
+        <ion-button>
+          <img src="../../assets/car-logo/honda-logo.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-buttons>
+        <ion-button>
+          <img src="../../assets/car-logo/hyundai-logo.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-slide>
+
+  </ion-slides>
+
+
+
+  <!-- RECOMMENDED FOR YOU -->
+  <div>
+    <ion-grid>
+
+      <ion-row class="ion-margin-horizontal ion-margin-top">
+        <h6>Recommended For You</h6>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="shadow-normal card-primary">
+
+            <ion-card-header>
+              <img src="../../assets/car-img/ford_ranger.png">
+            </ion-card-header>
+          
+            <ion-card-content>
+              <p>Ford Ranger Wildtrak</p>
+              <h5>16,000</h5>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="shadow-normal card-primary">
+
+            <ion-card-header>
+              <img src="../../assets/car-img/ford_ranger.png">
+            </ion-card-header>
+          
+            <ion-card-content>
+              <p>Ford Ranger Wildtrak</p>
+              <h5>16,000</h5>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="shadow-normal card-primary">
+
+            <ion-card-header>
+              <img src="../../assets/car-img/ford_ranger.png">
+            </ion-card-header>
+          
+            <ion-card-content>
+              <p>Ford Ranger Wildtrak</p>
+              <h5>16,000</h5>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="shadow-normal card-primary">
+
+            <ion-card-header>
+              <img src="../../assets/car-img/ford_ranger.png">
+            </ion-card-header>
+          
+            <ion-card-content>
+              <p>Ford Ranger Wildtrak</p>
+              <h5>16,000</h5>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+  </div>
+
+
+<!-- </div> -->
+
+<div style="height: 80px;">
+
+  </div>
+
+
+</ion-content>
+
