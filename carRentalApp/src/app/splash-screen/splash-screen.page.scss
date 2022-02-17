@@ -1,0 +1,45 @@
+ion-content{
+    --ion-background-color: black;
+    --background: linear-gradient(white, black);
+}
+
+ion-list-header{
+    font-family: OpenSans;
+}
+
+.speedyLogo{
+    height: auto;
+    display: block;
+    max-width: 50%;
+    transform: translate(50%, 60%);
+    position: absolute;
+}
+
+.carPic{
+    height: auto;
+    display: block;
+    max-width: 130%;
+    transform: translate(-30%, 80%);
+    position: absolute;
+    
+}
+
+.intro{
+    margin-top: 150%;
+}
+
+.par{
+    font-family: OpenSans;
+    font-size: 90%;
+    color: #e6e6e6;
+}
+
+.btn_go{
+    margin-top: 10%;
+    width: 320px;
+    height: 50px;
+    margin-left: 9%;
+    --vertical-align: middle;
+    --padding-start: 10px;
+    --padding-end: 10px;
+}

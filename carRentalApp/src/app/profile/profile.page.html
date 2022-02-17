@@ -1,0 +1,70 @@
+<ion-content>
+
+  
+  <ion-item>
+    <ion-icon name="arrow-back-outline" size="large" class="btn_back"></ion-icon>
+  </ion-item>
+
+  
+  <div class="text-center">
+    <img src="../../assets/driver-pic/crymeme.jpg" class="rounded mx-auto d-block" alt="...">
+    <h2 style="font-family: OpenSans-Bold;">Aldrin Villalobos</h2>
+    <ion-icon name="location" style="color: gray;"></ion-icon><span style="font-family: OpenSans; font-size: 100%;">&nbsp; Cabangan, Zambales</span>
+  </div>
+
+  <div class="payment">
+    <ion-item>
+      <ion-label style="font-family: OpenSans-Bold; font-size: 125%;">Payment</ion-label>
+      <span style="font-family: OpenSans;">+ Add New</span>
+    </ion-item>
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <img class="img_payment" src="../../assets/paymentMethod/mastercard.png">
+      </ion-slide>
+      <ion-slide>
+        <img class="img_payment" src="../../assets/paymentMethod/mastercard.png">
+      </ion-slide>
+      <ion-slide>
+        <img class="img_payment" src="../../assets/paymentMethod/mastercard.png">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <ion-list>
+    <ion-list-header style="font-size: 125%; font-family: OpenSans-Bold;"> Recent Transactions </ion-list-header>
+
+    <ion-item>
+      <ion-label>
+        <h2>February 2, 2022</h2>
+        <h3>Mazda 3</h3>
+      </ion-label>
+      <span style="font-family: OpenSans;">P 1,500.00</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h2>February 3, 2022</h2>
+        <h3>Mirage G4</h3>
+      </ion-label>
+      <span style="font-family: OpenSans;">P 2,500.00</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h2>February 4, 2022</h2>
+        <h3>Tesla</h3>
+      </ion-label>
+      <span style="font-family: OpenSans;">P 500.00</span>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h2>February 5, 2022</h2>
+        <h3>Ford Raptor</h3>
+      </ion-label>
+      <span style="font-family: OpenSans;">P 5,500.00</span>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

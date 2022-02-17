@@ -1,0 +1,93 @@
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-card-subtitle{
+    font-family: OpenSans;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+.rounded{
+    border-radius: 100% !important;
+    max-width: 11%;
+    margin-right: 5%;
+  }
+  
+  
+  ion-header{
+    --ion-background-color: rgb(26, 26, 26);
+  }
+  
+  ion-toolbar{
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  ion-searchbar{
+    --border-radius: 25px;
+    --box-shadow: none;
+    --background: rgb(228, 228, 228);
+    --cancel-button-color: rgb(26, 26, 26);
+    --color: rgb(26, 26, 26);
+    --icon-color: rgb(26, 26, 26);
+      height: 70px;
+      margin-top: 0%;
+  }
+  
+
+.type{
+    margin-top: 0%;
+    width: 120%;
+}
+
+.payment{
+    margin-top: 5%;
+    //margin-bottom: 20%;
+}
+
+.avail{
+    margin-bottom: 20%;
+}
+
+.logo{
+    max-width: 30%;
+    float: right;
+}
+
+.brand{
+    //float: left;
+    width: 65px;
+    height: 25px;
+    //object-fit: cover;
+}
+
+
+
+p{
+    font-family: OpenSans-Medium;
+    font-size: 100%;
+}
+
+.intro{
+    margin-top: 5%;
+}
+
+.driver_item{
+    border-radius: 20px;
+    margin-top: 5%;
+    --padding-end: 0px;
+  --inner-padding-end: 0px;
+}
+
+.btn_details{
+    margin-top: 25px;
+    height: 50px;
+    width: 130px;
+    --border-radius: 20px 0px 20px 0px;
+    margin-right: -15px;
+    font-size: 15px;
+    font-family: OpenSans-Medium;
+}

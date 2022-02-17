@@ -1,0 +1,81 @@
+ion-header{
+    --ion-background-color: rgb(26, 26, 26);
+}
+
+ion-toolbar{
+    border-radius: 0px 0px 20px 20px;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-card-subtitle{
+    font-family: OpenSans;
+}
+
+h2{
+    font-family: OpenSans-Medium;
+}
+
+h3{
+    font-family: OpenSans;
+}
+
+p{
+    font-family: OpenSans;
+}
+
+.rounded{
+    border-radius: 100% !important;
+    max-width: 100%;
+    margin-right: 5%;
+}
+
+.rounded1{
+    border-radius: 100% !important;
+    max-width: 11%;
+    margin-right: 5%;
+  }
+
+
+.type{
+    margin-top: 0%;
+    width: 100%;
+}
+
+.payment{
+    margin-top: 5%;
+}
+
+.intro{
+    margin-top: 5%;
+}
+
+.driver{
+    margin-bottom: 25%;
+}
+
+.driver_list{
+    border-radius: 20px;
+    margin-top: 5%;
+}
+
+.btn_details{
+    margin-top: 40px;
+    height: 50px;
+    width: 70px;
+    --border-radius: 20px 0px 20px 0px;
+    //margin-right: -50px;
+}
+
+.driver_item{
+    --padding-end: 0px;
+  --inner-padding-end: 0px;
+}
+

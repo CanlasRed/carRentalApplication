@@ -1,0 +1,67 @@
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-list-header{
+    font-family:OpenSans;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+h2{
+    font-family:OpenSans-Medium;
+}
+
+h3{
+    font-family:OpenSans;
+}
+
+h5{
+    font-family:OpenSans;
+}
+
+.rounded{
+    border-radius: 100% !important;
+    max-width: 30%;
+    margin-top: 10%;
+}
+
+.btn_back{
+    margin-top: 10%;
+    color: black;
+}
+
+.payment{
+    margin-top: 5%;
+
+}
+
+.img_payment{
+    max-width: 100%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.icon {
+    display: inline-block;
+    font-size: 35px;
+    color: #ffC977;
+    vertical-align: middle;
+   }
+   
+   .text{
+     display: inline-block;
+     vertical-align: middle;
+   }
+
+.edit{
+    margin-top: 17px;
+    color: gray;
+}
+
+.trans{
+    margin-bottom: 25%;
+}

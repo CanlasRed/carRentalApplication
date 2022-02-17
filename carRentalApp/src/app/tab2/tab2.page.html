@@ -1,17 +1,147 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border top1">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+
+    <h4 class="ion-margin-start" style="font-family: OpenSans; font-size: 140%; color: white;">Speedy</h4>
+    
+    <img slot="end" src="../../assets/driver-pic/crymeme.jpg" class="rounded" alt="...">
+    <!-- <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <h2 class="ion-margin-start intro" style="font-family: OpenSans-Medium;">Choose a car</h2>
+    <ion-searchbar style="font-family: OpenSans-Bold; font-size: 130%;" showCancelButton="focus" animated placeholder="Find Car"></ion-searchbar>
+  </ion-toolbar>
+  
+
+    
+
+  <div class="payment">
+  <ion-item>
+    <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Brands</ion-label>
+  </ion-item>
+
+  <div >
+    <ion-grid>
+    
+      <ion-row>
+          <ion-slides [options]="sliderBrands" class="type">
+  
+      <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <img class="brand" src="../../assets/car-logo/ford-logo.png">
+              </ion-card-header>
+            </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <img class="brand" src="../../assets/car-logo/honda-logo.png">
+              </ion-card-header>
+            </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <img class="brand" src="../../assets/car-logo/hyundai-logo.png">
+              </ion-card-header>
+            </ion-card>
+      </ion-slide>
+  
+      <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <img class="brand" src="../../assets/car-logo/mazda-logo.png">
+              </ion-card-header>
+            </ion-card>
+      </ion-slide>
+  
+    </ion-slides>
+    </ion-row>
+    </ion-grid>
+  </div>
+  </div>
+
+  <div class="payment">
+    <ion-item>
+      <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Available Cars</ion-label>
+    </ion-item>
+  
+    <div class="avail">
+      <ion-grid>
+    
+        <ion-row>
+          <ion-col>
+            <ion-card no-padding class="shadow-normal card-primary" class="driver_item">
+    
+              <ion-card-header class="text-center">
+                <img src="../../assets/car-img/mazda3.png">
+              </ion-card-header>
+            
+              <ion-card-content>
+                <ion-button size="large" color="dark" class="float-right btn_details" [routerLink]="['/view-car']">Details</ion-button>
+                <p>Mazda 3</p>
+                <p>Type: Sedan</p>
+                <!-- <img src="../../assets/car-logo/mazda-logo.png" class="logo"> -->
+                <h5 class="price">16,000<span style="color: #b3b3b3; font-family: OpenSans-Medium;"> /a day</span></h5>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+            <ion-card class="shadow-normal card-primary" class="driver_item">
+    
+              <ion-card-header class="text-center">
+                <img src="../../assets/car-img/honda_civic2022.png">
+              </ion-card-header>
+            
+              <ion-card-content>
+                <ion-button size="large" color="dark" class="float-right btn_details" [routerLink]="['/view-car']">Details</ion-button>
+                <p>Honda Civic 2022</p>
+                <p>Type: Sedan</p>
+                <!-- <img src="../../assets/car-logo/honda-logo.png" class="logo"> -->
+                <h5 class="price">16,000<span style="color: #b3b3b3; font-family: OpenSans-Medium;"> /a day</span></h5>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+    
+    
+        <ion-row>
+          <ion-col>
+            <ion-card class="shadow-normal card-primary" class="driver_item">
+    
+              <ion-card-header class="text-center">
+                <img src="../../assets/car-img/ford_ranger.png">
+              </ion-card-header>
+            
+              <ion-card-content>
+                <ion-button size="large" color="dark" class="float-right btn_details" [routerLink]="['/view-car']">Details</ion-button>
+                <p>Ford Ranger Wildtrak</p>
+                <p>Type: Pickup Truck</p>
+                <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
+                <h5 class="price">16,000<span style="color: #b3b3b3; font-family: OpenSans-Medium;"> /a day</span></h5>
+                
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </div>
+    </div>
+
 </ion-content>

@@ -1,0 +1,187 @@
+ion-content{
+    --ion-background-color: white;
+    font-family:OpenSans;
+}
+
+ion-label{
+    font-family:OpenSans;
+}
+
+ion-list-header{
+    font-family:OpenSans;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+ion-card-subtitle{
+    font-family:OpenSans;
+}
+
+ion-button{
+    font-family:OpenSans;
+}
+
+h2{
+    font-family:OpenSans;
+}
+
+.box{
+    
+    background-color: #18191a;
+    border-radius: 50px;
+    margin-top: -100px;
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.ion-avatar{
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 20% !important;
+    overflow: hidden !important;
+    border: 5px solid white!important;
+    background-color: white;
+}
+
+.carLogotop{
+    width: 110%;
+    height: auto;
+    margin-left: 0%;
+    margin-top: 20%;
+}
+
+.logoBox{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: -80px;
+    margin-top: 5%;
+}
+
+.carPic{
+    height: auto;
+    display: block;
+    max-width: 170%;
+    //margin-top: 100%;
+    transform: translate(0%, 10%);
+    position: relative;
+
+}
+
+.carPic1{
+    height: auto;
+    display: block;
+    max-width: 130%;
+    
+    transform: translate(0%, 10%);
+    position: relative;
+}
+
+
+.cardiv{
+    position: relative;
+    z-index: 2;
+    margin-top: 60%;
+    display: block;
+    transform: translate(0%, 10%);
+}
+
+.carName{
+    position: absolute;
+    color: white;
+    margin-left: 10px;
+    margin-top: 19px;
+    font-size: 20px;
+}
+
+.carYear{
+    color: #b3b3b3;
+    margin-left: -10px;
+    margin-top: -8px;
+    font-size: 20px;
+}
+
+.car-logo{
+    position: relative;
+    width: 42px;
+    height: 27px;
+    top: 12px;
+    left: 3px;
+}
+
+.btn_back{
+    color: white;
+    width: 8%;
+    height: 8%;
+    margin-top: 30%;
+    margin-left: 3%;
+}
+
+.driver{
+    margin-top: 5%;
+}
+
+.specification{
+    margin-top: 5%;
+}
+
+#new-listings{
+    ion-slide{
+        ion-card{
+            --background: rgb(26, 26, 26);
+            ion-card-title{
+                color: #fff;
+            }
+            ion-card-subtitle{
+                color: rgb(230, 230, 230);
+            }
+            height: 120px;
+        }
+    }
+}
+
+.card-primary{
+    border-radius: 25px;
+
+}
+
+.car-image-box{
+    padding: 0px 0;
+    img{
+        object-fit: contain;
+        height: 0%;
+    }
+}
+
+.stick-bottom{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.icon {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.location{
+    margin-top: 5%;
+}
+
+.btn_book{
+    width: 100%;
+    height: 100%;
+}
+
+.price_btn{
+    margin-top: 5%;
+}

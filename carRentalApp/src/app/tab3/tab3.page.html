@@ -1,17 +1,150 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border top1">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+
+    <h4 class="ion-margin-start" style="font-family: OpenSans; font-size: 140%; color: white;">Speedy</h4>
+    
+    <img slot="end" src="../../assets/driver-pic/crymeme.jpg" class="rounded1" alt="...">
+    <!-- <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-toolbar>
+    <h2 class="ion-margin-start intro" style="font-family: OpenSans-Medium;">Speedy Drivers</h2>
+  </ion-toolbar>
+
+  <div class="payment">
+    <ion-item>
+      <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Type</ion-label>
+    </ion-item>
+  
+    <div class="text-center">
+      <ion-slides [options]="sliderBrands" class="type">
+    
+        <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <img src="../../assets/car-type/sedan-icon.png">
+                  <!-- <ion-card-subtitle>Sedan</ion-card-subtitle> -->
+                </ion-card-header>
+              </ion-card>
+        </ion-slide>
+    
+        <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <img src="../../assets/car-type/supercar-icon.png">
+                  <!-- <ion-card-subtitle>Sports</ion-card-subtitle> -->
+                </ion-card-header>
+              </ion-card>
+        </ion-slide>
+    
+        <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <img src="../../assets/car-type/suv-icon.png">
+                  <!-- <ion-card-subtitle>SUV</ion-card-subtitle> -->
+                </ion-card-header>
+              </ion-card>
+        </ion-slide>
+    
+        <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <img src="../../assets/car-type/van-icon.png">
+                  <!-- <ion-card-subtitle>Van</ion-card-subtitle> -->
+                </ion-card-header>
+              </ion-card>
+        </ion-slide>
+    
+      </ion-slides>
+    </div>
+    </div>
+
+
+    <div class="payment">
+      <ion-item>
+        <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Available Driver</ion-label>
+        <ion-icon name="funnel-outline"></ion-icon>
+      </ion-item>
+    </div>
+
+    <div class="driver">
+  <ion-card class="driver_list">
+  <ion-item no-padding class="driver_item">
+    <ion-avatar slot="start">
+      <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
+    </ion-avatar>
+    <ion-label>
+      <h2>John Doe</h2>
+      <h3>Location:</h3>
+      <p>Type: Sedan</p>
+    </ion-label>
+    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card class="driver_list">
+  <ion-item no-padding class="driver_item">
+    <ion-avatar slot="start">
+      <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Zoe Bueza</h2>
+      <h3>Location:</h3>
+      <p>Type: SUV</p>
+    </ion-label>
+    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card class="driver_list">
+  <ion-item no-padding class="driver_item">
+    <ion-avatar slot="start">
+      <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Aldrin Villalobos</h2>
+      <h3>Location:</h3>
+      <p>Type: Pickup Truck</p>
+    </ion-label>
+    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card class="driver_list">
+  <ion-item no-padding class="driver_item">
+    <ion-avatar slot="start">
+      <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Justin Red Canlas</h2>
+      <h3>Location:</h3>
+      <p>Type: Sedan</p>
+    </ion-label>
+    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card class="driver_list">
+  <ion-item no-padding class="driver_item">
+    <ion-avatar slot="start">
+      <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Jefferson Jacobo</h2>
+      <h3>Location:</h3>
+      <p>Type: Van</p>
+    </ion-label>
+    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+  </ion-item>
+</ion-card>
+</div>
+
 </ion-content>

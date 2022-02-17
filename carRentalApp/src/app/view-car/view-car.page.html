@@ -1,0 +1,128 @@
+<ion-content>
+
+
+
+
+<div class="box">
+
+  <ion-icon name="arrow-back-outline" class="btn_back"></ion-icon>
+  <ion-item color="none">
+    <ion-avatar class="ion-avatar" slot="start">
+      <img class="carLogotop" src="../../assets/car-logo/mazda-logo.png">
+    </ion-avatar>
+    <ion-label>
+      <ion-list-header style="font-size: 125%; color: white;"> Mazda 3 </ion-list-header>
+      <ion-list-header style="font-size: 125%; color: #e6e6e6;"> 2021 </ion-list-header>
+    </ion-label>
+  </ion-item>
+</div>
+
+
+<div class="cardiv">
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <img class="carPic" src="../../assets/car-img/mazda_3.png">
+    </ion-slide>
+    <ion-slide>
+      <img class="carPic1" src="../../assets/car-img/mazda3.png">
+    </ion-slide>
+    <ion-slide>
+      <img class="carPic" src="../../assets/car-img/mazda_3.png">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<div class="driver">
+<ion-list-header style="font-size: 125%;"> Driver/Owner </ion-list-header>
+
+<ion-item>
+  <ion-avatar slot="start">
+    <img src="../../assets/driver-pic/crymeme.jpg" />
+  </ion-avatar>
+  <ion-label>
+    <h2>Aldrin Villalobos</h2>
+  </ion-label>
+  <ion-icon name="chatbubble-ellipses-outline" style="color: black;"></ion-icon> &nbsp; &nbsp;
+  <ion-icon name="call" style="color: black;"></ion-icon>
+</ion-item>
+</div>
+
+<div class="specification">
+  <ion-list-header style="font-size: 125%;"> Specification </ion-list-header>
+  
+  <ion-slides [options]="sliderOptions" id="new-listings">
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+        <ion-card-content>
+          <ion-row class="">
+            <img class="icon" src="../../assets/icon/speedometer (1).png" />
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="stick-bottom ion-margin">
+          <div >
+            <ion-card-subtitle>100 km/h</ion-card-subtitle>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+        <ion-card-content>
+          <ion-row class="car-image-box">
+            <img class="icon" src="../../assets/icon/car (2).png" />
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="stick-bottom ion-margin">
+          <div >
+            <ion-card-subtitle>Liftback</ion-card-subtitle>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card class="shadow-normal card-primary">
+        <ion-card-content>
+          <ion-row class="car-image-box">
+            <img class="icon" src="../../assets/icon/car-seat.png" />
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="stick-bottom ion-margin">
+          <div >
+            <ion-card-subtitle>4 seaters</ion-card-subtitle>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    </ion-slides>
+
+  </div>
+
+  <div class="location">
+    <ion-list-header style="font-size: 125%;"> Location  &nbsp;<span style="color: #b3b3b3; float: right;">(1000km)</span> </ion-list-header>
+    
+    <ion-item>
+      <ion-avatar slot="start">
+        <img class="" src="../../assets/icon/map.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Marawi City, Philippines</h2>
+      </ion-label>
+    </ion-item>
+    </div>
+
+
+    <div class="price_btn">
+      <ion-item>
+        <ion-list-header style="font-size: 130%;"> $ 550.00 <span style="color: #b3b3b3;"> /a day</span> </ion-list-header>
+        <ion-button style="font-size: 100%;" color="dark" class="btn_book">Book Now</ion-button>
+      </ion-item>
+    </div>
+
+
+
+  
+</ion-content>
