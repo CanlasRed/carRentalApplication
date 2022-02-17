@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ViewDriverPage } from '../view-driver/view-driver.page';
 
 @Component({
   selector: 'app-tab3',
@@ -24,6 +26,17 @@ export class Tab3Page {
     speed: 400
   }
 
-  constructor() {}
+  constructor(private modalCtrl: ModalController) {}
+
+  async presentModal() {
+    const modal = await this.modalCtrl.create({
+      component: ViewDriverPage,
+      breakpoints: [0, 0.3, 0.5, 0.8],
+      initialBreakpoint: 0.8
+      
+      
+    });
+    await modal.present();
+  }
 
 }

@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -14,7 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-<<<<<<< HEAD
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   },
@@ -34,6 +34,18 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'view-driver',
+    loadChildren: () => import('./view-driver/view-driver.module').then( m => m.ViewDriverPageModule)
+  },
+  {
+    path: 'book-now',
+    loadChildren: () => import('./book-now/book-now.module').then( m => m.BookNowPageModule)
+  },
+  {
+    path: 'recent-transaction',
+    loadChildren: () => import('./recent-transaction/recent-transaction.module').then( m => m.RecentTransactionPageModule)
+  },
 
 ];
 @NgModule({
@@ -43,17 +55,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-=======
-    path: 'vehicle-types',
-    loadChildren: () => import('./vehicle-types/vehicle-types.module').then( m => m.VehicleTypesPageModule)
-  }
-
-];
-@NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
->>>>>>> 662542ba2565ec3993dd9621f2313366a23d5701

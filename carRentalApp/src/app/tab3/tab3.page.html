@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border top1">
   <ion-toolbar>
 
-    <h4 class="ion-margin-start" style="font-family: OpenSans; font-size: 140%; color: white;">Speedy</h4>
+    <h4 class="ion-margin-start" style="font-size: 140%; color: white;">Speedy</h4>
     
     <img slot="end" src="../../assets/driver-pic/crymeme.jpg" class="rounded1" alt="...">
     <!-- <ion-buttons slot="end">
@@ -16,12 +16,12 @@
 <ion-content [fullscreen]="true">
 
   <ion-toolbar>
-    <h2 class="ion-margin-start intro" style="font-family: OpenSans-Medium;">Speedy Drivers</h2>
+    <h2 class="ion-margin-start intro">Speedy Drivers</h2>
   </ion-toolbar>
 
   <div class="payment">
     <ion-item>
-      <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Type</ion-label>
+      <ion-label style="font-size: 125%;">Types</ion-label>
     </ion-item>
   
     <div class="text-center">
@@ -70,7 +70,7 @@
 
     <div class="payment">
       <ion-item>
-        <ion-label style="font-family: OpenSans-Medium; font-size: 125%;">Available Driver</ion-label>
+        <ion-label style="font-size: 125%;">Available Driver</ion-label>
         <ion-icon name="funnel-outline"></ion-icon>
       </ion-item>
     </div>
@@ -82,11 +82,11 @@
       <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
     </ion-avatar>
     <ion-label>
-      <h2>John Doe</h2>
-      <h3>Location:</h3>
+      <h6>John Doe</h6>
+      <h7>Location:</h7>
       <p>Type: Sedan</p>
     </ion-label>
-    <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
+    <ion-button (click)="presentModal()" size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
   </ion-item>
 </ion-card>
 
@@ -96,8 +96,8 @@
       <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
     </ion-avatar>
     <ion-label>
-      <h2>Zoe Bueza</h2>
-      <h3>Location:</h3>
+      <h6>Zoe Bueza</h6>
+      <h7>Location:</h7>
       <p>Type: SUV</p>
     </ion-label>
     <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -110,8 +110,8 @@
       <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
     </ion-avatar>
     <ion-label>
-      <h2>Aldrin Villalobos</h2>
-      <h3>Location:</h3>
+      <h6>Aldrin Villalobos</h6>
+      <h7>Location:</h7>
       <p>Type: Pickup Truck</p>
     </ion-label>
     <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -124,8 +124,8 @@
       <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
     </ion-avatar>
     <ion-label>
-      <h2>Justin Red Canlas</h2>
-      <h3>Location:</h3>
+      <h6>Justin Red Canlas</h6>
+      <h7>Location:</h7>
       <p>Type: Sedan</p>
     </ion-label>
     <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -138,8 +138,8 @@
       <img src="../../assets/driver-pic/crymeme.jpg" class="rounded" />
     </ion-avatar>
     <ion-label>
-      <h2>Jefferson Jacobo</h2>
-      <h3>Location:</h3>
+      <h6>Jefferson Jacobo</h6>
+      <h7>Location:</h7>
       <p>Type: Van</p>
     </ion-label>
     <ion-button size="small" color="dark" class="float-right btn_details"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>

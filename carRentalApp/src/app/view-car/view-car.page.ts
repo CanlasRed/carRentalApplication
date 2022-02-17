@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { BookNowPage } from '../book-now/book-now.page';
 
 @Component({
   selector: 'app-view-car',
@@ -36,7 +38,18 @@ export class ViewCarPage implements OnInit {
     },
   };
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
+
+  async presentModal() {
+    const modal = await this.modalCtrl.create({
+      component: BookNowPage,
+      breakpoints: [0, 0.3, 0.5, 0.8],
+      initialBreakpoint: 0.8
+      
+      
+    });
+    await modal.present();
+  }
 
   ngOnInit() {
   }

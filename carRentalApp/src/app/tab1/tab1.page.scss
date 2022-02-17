@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "bootstrap";
+
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+  }
+  
+
 .rounded{
   border-radius: 100% !important;
   max-width: 11%;
@@ -38,22 +48,13 @@ ion-card{
   border-radius: 10%;
 }
 
-ion-card-subtitle{
-  font-family: OpenSans;
-}
-
 ion-item{
   --border-width: 0;
   --inner-border-width: 0;
 }
 
 p{
-  font-family: OpenSans-Medium;
   font-size: 100%;
-}
-
-h5{
-  font-family: OpenSans-Bold;
 }
 
 .type{
@@ -98,11 +99,10 @@ h5{
 }
 
 .btn_details{
-  margin-top: -30px;
+  margin-top: -10px;
   height: 40px;
   width: 40px;
   --border-radius: 20px 0px 20px 0px;
   margin-right: -15px;
   font-size: 15px;
-  font-family: OpenSans-Medium;
 }

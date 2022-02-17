@@ -40,7 +40,7 @@
     <img src="../../assets/driver-pic/crymeme.jpg" />
   </ion-avatar>
   <ion-label>
-    <h2>Aldrin Villalobos</h2>
+    <h5>Aldrin Villalobos</h5>
   </ion-label>
   <ion-icon name="chatbubble-ellipses-outline" style="color: black;"></ion-icon> &nbsp; &nbsp;
   <ion-icon name="call" style="color: black;"></ion-icon>
@@ -105,11 +105,9 @@
     <ion-list-header style="font-size: 125%;"> Location  &nbsp;<span style="color: #b3b3b3; float: right;">(1000km)</span> </ion-list-header>
     
     <ion-item>
-      <ion-avatar slot="start">
-        <img class="" src="../../assets/icon/map.png" />
-      </ion-avatar>
+        <img class="map_icon" src="../../assets/icon/map.png" />
       <ion-label>
-        <h2>Marawi City, Philippines</h2>
+        <h6 class="address">Marawi City, Philippines</h6>
       </ion-label>
     </ion-item>
     </div>
@@ -117,8 +115,8 @@
 
     <div class="price_btn">
       <ion-item>
-        <ion-list-header style="font-size: 130%;"> $ 550.00 <span style="color: #b3b3b3;"> /a day</span> </ion-list-header>
-        <ion-button style="font-size: 100%;" color="dark" class="btn_book">Book Now</ion-button>
+        <ion-list-header style="font-size: 120%;"> $ 550.00 <span style="color: #b3b3b3;"> /a day</span> </ion-list-header>
+        <ion-button (click)="presentModal()" style="font-size: 100%;" color="dark" class="btn_book">Book Now</ion-button>
       </ion-item>
     </div>
 
