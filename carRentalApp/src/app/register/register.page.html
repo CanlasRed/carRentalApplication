@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar hidden>
+    <ion-title>Signup</ion-title>
+
+    <!-- BOXICON CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="row">
+      <div class="col">
+        <a (click)="back();" class="back-icon">
+          <i class="far fa-arrow-alt-circle-left"></i>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top: 0.3rem !important;"></div>
+
+    <div class="row">
+      <div class="col">
+        <h1 id="login-title"></h1>
+        <h3>Create Account</h3>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-input type="text" [(ngModel)]="firstname" type="text" class="input-format" placeholder="Firstname" autofocus>
+            <i class='bx bx-user-pin input-icon'></i>
+          </ion-input>
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-input type="text" [(ngModel)]="lastname" type="text" class="input-format" placeholder="Lastname" autofocus>
+            <i class='bx bxs-user-pin input-icon' ></i>
+          </ion-input>
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-input type="text" [(ngModel)]="email" type="text" class="input-format" placeholder="Email" autofocus>
+            <i class="fas fa-at input-icon"></i>
+          </ion-input>
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-input type="text" [(ngModel)]="phone" type="text" class="input-format" placeholder="Phone #" autofocus>
+            <i class='bx bxs-phone input-icon' ></i>
+          </ion-input>
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-input type="text" [(ngModel)]="username" type="text" class="input-format" placeholder="Username" autofocus>
+            <i class='bx bxs-user input-icon'></i>
+          </ion-input>
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-item lines="none" class="input-format">
+            <i class='bx bxs-lock '></i>
+            <ion-input [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'"  placeholder="Password" style="padding-left: 7px !important;"></ion-input>
+            <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+          </ion-item>        
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <ion-item lines="none" class="input-format">
+            <i class='bx bx-lock-alt' ></i>
+            <ion-input [(ngModel)]="repassword" [type]="showPassword2 ? 'text' : 'password'"  placeholder="Retype Password" style="padding-left: 7px !important;"></ion-input>
+            <ion-icon slot="end" [name]="passwordToggleIcon2" (click)="togglePassword2()"></ion-icon>
+          </ion-item>       
+        </center>
+      </div>
+    </div>
+
+
+    <div style="margin-top: 2.2rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <center>
+          <button class="btn" id="signin-button">Sign In</button>
+
+        </center>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.7rem;"></div>
+
+    <div class="row">
+      <div class="col">
+        <span>Already have an account?<a (click)="login();" class="no-account"> Login</a></span>
+        
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</ion-content>
