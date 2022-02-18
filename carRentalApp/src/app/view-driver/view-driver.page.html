@@ -18,11 +18,34 @@
       </center>
       
     </div>
-    <ion-button (click)="booknow();" expand="full" shape="round" color="dark">Book Now</ion-button><div style="margin-top: 1rem;"></div>
 
-    <ion-button (click)="presentModal();" expand="full" shape="round" color="light">Message</ion-button><div style="margin-top: 1rem;"></div>
+    <ion-item class="driver-info" color="transparent" lines="none">
+      <ion-label slot="start" style="font-size: 105%;">Cars Driven:</ion-label>
+      <ion-label style="font-size: 90%;">SUV, Van, Suden</ion-label>
+    </ion-item>
 
-    <ion-button expand="full" shape="round" color="light">Call</ion-button><div style="margin-top: 1rem;"></div>
+    <ion-item class="driver-info" color="transparent" lines="none">
+      <ion-label slot="start" style="font-size: 105%;">Contact #:</ion-label>
+      <ion-label style="font-size: 90%;">09123456789</ion-label>
+    </ion-item>
+
+    <ion-item class="driver-info" color="transparent" lines="none">
+      <ion-label slot="start" style="font-size: 105%;">Address:</ion-label>
+      <ion-label style="font-size: 90%;">Blk.1 Gordon Heights, Olongapo City</ion-label>
+    </ion-item>
+    
+
+
+      
+
+    
+
+
+    <ion-button (click)="booknow();" expand="full" shape="round" color="dark">Book Now</ion-button>
+
+    <ion-button (click)="presentModal();" expand="full" shape="round" color="light" hidden>Message</ion-button><div style="margin-top: 1rem;"></div>
+
+    <ion-button expand="full" shape="round" color="light" hidden>Call</ion-button><div style="margin-top: 1rem;" ></div>
   </div>
 </ion-content>
 
