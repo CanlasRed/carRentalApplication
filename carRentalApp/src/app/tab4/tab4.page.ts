@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { RecentTransactionPage } from '../recent-transaction/recent-transaction.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab4',
@@ -9,7 +10,7 @@ import { RecentTransactionPage } from '../recent-transaction/recent-transaction.
 })
 export class Tab4Page implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private router: Router) { }
 
   async presentModal() {
     const modal = await this.modalCtrl.create({
@@ -23,6 +24,10 @@ export class Tab4Page implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.router.navigate(['/login'])
   }
 
 }

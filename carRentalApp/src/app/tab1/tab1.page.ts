@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ViewMessagesPage } from '../view-messages/view-messages.page';
 
 @Component({
   selector: 'app-tab1',
@@ -24,6 +26,19 @@ export class Tab1Page {
     speed: 400
   }
 
-  constructor() {}
+  
+
+  constructor(private modalCtrl: ModalController) {}
+
+  async presentModal() {
+    const modal = await this.modalCtrl.create({
+      component: ViewMessagesPage,
+      breakpoints: [0, 1, 1, 1],
+      initialBreakpoint: 1
+      
+      
+    });
+    await modal.present();
+  }
 
 }

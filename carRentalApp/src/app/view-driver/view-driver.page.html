@@ -13,11 +13,16 @@
     <div class="user-meta ion-text-center">
       <h3 class="playername">John Doe</h3>
       <h5 class="country">Marawi City</h5>
-      <h6 class="ranking">Available Now</h6>
+      <center>
+        <h6 class="ranking">Available Now</h6>
+      </center>
+      
     </div>
-    <ion-button expand="full" color="dark">Book Now</ion-button>
-    <ion-button expand="full" color="light">Message</ion-button>
-    <ion-button expand="full" color="light">Call</ion-button>
+    <ion-button (click)="booknow();" expand="full" shape="round" color="dark">Book Now</ion-button><div style="margin-top: 1rem;"></div>
+
+    <ion-button (click)="presentModal();" expand="full" shape="round" color="light">Message</ion-button><div style="margin-top: 1rem;"></div>
+
+    <ion-button expand="full" shape="round" color="light">Call</ion-button><div style="margin-top: 1rem;"></div>
   </div>
 </ion-content>
 

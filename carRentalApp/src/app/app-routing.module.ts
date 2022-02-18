@@ -45,7 +45,15 @@ const routes: Routes = [
   {
     path: 'recent-transaction',
     loadChildren: () => import('./recent-transaction/recent-transaction.module').then( m => m.RecentTransactionPageModule)
+  },  {
+    path: 'message',
+    loadChildren: () => import('./message/message.module').then( m => m.MessagePageModule)
   },
+  {
+    path: 'view-messages',
+    loadChildren: () => import('./view-messages/view-messages.module').then( m => m.ViewMessagesPageModule)
+  },
+
 
 ];
 @NgModule({

@@ -50,11 +50,11 @@
   <ion-grid>
     <ion-row>
         <ion-col size-sm="6" size="6" class="ion-text-center">
-            <ion-button expand="full" class="ion-text-wrap min-max-width" color="dark">Save</ion-button>
+            <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width" color="dark">Save</ion-button>
         </ion-col>
 
         <ion-col size-sm="6" size="6" class="ion-text-center">
-            <ion-button expand="full" class="ion-text-wrap min-max-width text-dark"  fill="clear">Clear</ion-button>
+            <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width text-dark"  fill="clear">Clear</ion-button>
         </ion-col>
     </ion-row>
 </ion-grid>
@@ -65,19 +65,27 @@
       <ion-label style="font-size: 125%;">Verification</ion-label>
     </ion-item>
 
-  <div class="trans">
-    <ion-list>
-    <ion-item>
-      <ion-label><a href="" style="color: black;">Verify ID</a></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label><a href="" style="color: black;">Verify Email</a></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label><a href="" style="color: black;"> Verify 09982115529</a></ion-label>
-    </ion-item>
-  </ion-list>
-</div>
+    <div class="trans">
+      <ion-list>
+        <ion-item>
+          <ion-label><a href="" style="color: black;">Verify ID</a></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label><a href="" style="color: black;">Verify Email</a></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label><a href="" style="color: black;"> Verify 09982115529</a></ion-label>
+        </ion-item>
+      </ion-list>
+
+      <center>
+        <button (click)="logout();" class="btn" id="logout-button">Logout</button>
+      </center>
+      
+    </div>
+
+    
   </div>
+
 
 </ion-content>

@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
   }
 
   signin(){
-    this.router.navigate(['/vehicle-types'])
+    this.router.navigate(['/tabs/tab1'])
   }
 
 }
