@@ -26,7 +26,7 @@
 
   <div class="payment">
     <ion-item>
-      <ion-label style="font-size: 125%;">Types</ion-label>
+      <h2 style="font-size: 125%;">Types</h2>
     </ion-item>
   
     <div class="text-center">
@@ -81,12 +81,13 @@
 
 <div class="available">
   <ion-item>
-    <ion-label style="font-size: 125%;">Available Cars</ion-label>
+    <h2 style="font-size: 125%;">Available Cars</h2>
+    <ion-icon name="funnel-outline" slot="end"></ion-icon>
   </ion-item>
 
 
 <ion-item class="driver">
-  <ion-label style="font-size: 100%; color: gray;">With Driver</ion-label>
+  <h3 style="font-size: 100%; color: gray;">With Driver</h3>
   <ion-toggle slot="end" name="blackberry" color="dark" checked></ion-toggle>
 </ion-item>
 </div>
@@ -107,8 +108,12 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
+              <ion-icon name="person" class="icon"></ion-icon>
+              <span class="text">4</span>
+              <ion-icon name="person-remove" class="icon"></ion-icon>
+              <span class="text">0</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <h7 class="price">16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -122,8 +127,12 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span>
+            <ion-icon name="person-add" class="icon"></ion-icon> 
+            <span class="text">1</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <h7 class="price">16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details"  [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -140,8 +149,12 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span> 
+            <ion-icon name="person-remove" class="icon"></ion-icon>
+            <span class="text">0</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <h7 class="price">16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -155,8 +168,12 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span>
+            <ion-icon name="person-add" class="icon"></ion-icon> 
+            <span class="text">1</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <h7 class="price">16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -171,7 +188,7 @@
 
 <div class="available">
   <ion-item>
-    <ion-label style="font-size: 125%;">Recommended For You</ion-label>
+    <h2 style="font-size: 125%;">Recommended For You</h2>
   </ion-item>
 </div>
 
@@ -188,7 +205,9 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <h7>16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span> 
+            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -202,7 +221,9 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <h7>16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span> 
+            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -219,7 +240,9 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <h7>16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span> 
+            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -233,7 +256,9 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <h7>16,000<span style="color: #b3b3b3;"> /a day</span></h7>
+            <ion-icon name="person" class="icon"></ion-icon>
+            <span class="text">4</span> 
+            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>

@@ -16,9 +16,7 @@ export class ViewDriverPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: MessagePage,
       breakpoints: [0, 1, 1, 1],
-      initialBreakpoint: 1
-      
-      
+      initialBreakpoint: 1,
     });
     await modal.present();
   }

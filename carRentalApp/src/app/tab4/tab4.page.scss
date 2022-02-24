@@ -7,8 +7,13 @@
     text-decoration: none;
   }
 
+
 ion-content{
     --ion-background-color: white;
+}
+
+ion-label{
+    --ion-font-family: 'Poppins', sans-serif;
 }
 
 ion-item{

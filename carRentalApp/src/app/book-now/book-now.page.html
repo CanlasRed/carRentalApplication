@@ -1,24 +1,47 @@
 <ion-content fullscreen="true" >
+    
+  <div class="ion-padding">
 
 
-  <div class="card">
-    <div class="header">
-      <div class="avatar">
-        <img src="../../assets/driver-pic/crymeme.jpg" alt="">
-      </div>
-    </div>
+    <ion-card class="driver_item1">
+      <ion-list>
+        <ion-item class="date1">
+          <ion-label position="stacked" style="font-size: 20px;">Pick-up</ion-label>
+          <ion-input placeholder="Pick-up Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
+          <ion-input placeholder="Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
+        </ion-item>
+        <ion-item class="date2">
+          <ion-label position="stacked" style="font-size: 20px;">Drop-off</ion-label>
+          <ion-input placeholder="Drop-off Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
+          <ion-input placeholder="Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+
+  <div class="text-left">
+        <ion-card class="shadow-normal card-primary" class="driver_item2">
+
+          <ion-card-content>
+            <ion-card-subtitle style="color: black;">Price Summary</ion-card-subtitle>
+              <ion-card-subtitle>Car Rental Fee:<span class="float-right">3,000</span></ion-card-subtitle>
+              <ion-card-subtitle>Driver Fee:<span class="float-right">1,000</span></ion-card-subtitle>
+              <ion-card-subtitle>Deposit:<span class="float-right">2,000</span></ion-card-subtitle>
+            <ion-card-subtitle style="color: black;">Total Amount:<span class="float-right">6,000</span></ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+
   </div>
 
+</div>
+    
   <div class="card-body">
-    <div class="user-meta ion-text-center">
-      <h3 class="playername">John Doe</h3>
-      <h5 class="country">Marawi City</h5>
-      <h6 class="ranking">Available Now</h6>
+    <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+      <!-- <ion-chip outline color="light">
+      <ion-label>₱ 6,000</ion-label>
+    </ion-chip> -->
+    Book Now</ion-button>
     </div>
-    <ion-button expand="full" color="dark">Book Now</ion-button>
-    <ion-button expand="full" color="light">Message</ion-button>
-    <ion-button expand="full" color="light">Call</ion-button>
-  </div>
 </ion-content>
 
 

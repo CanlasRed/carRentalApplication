@@ -1,126 +1,248 @@
-<ion-content>
+<ion-content [fullscreen]="true">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-
-<div class="box">
-
-  <ion-icon name="arrow-back-outline" class="btn_back"></ion-icon>
-  <ion-item color="none">
-    <ion-avatar class="ion-avatar" slot="start">
-      <img class="carLogotop" src="../../assets/car-logo/mazda-logo.png">
-    </ion-avatar>
-    <ion-label>
-      <ion-list-header style="font-size: 125%; color: white;"> Mazda 3 </ion-list-header>
-      <ion-list-header style="font-size: 125%; color: #e6e6e6;"> 2021 </ion-list-header>
-    </ion-label>
-  </ion-item>
-</div>
-
-
-<div class="cardiv">
-  <ion-slides [options]="slideOpts">
-    <ion-slide>
-      <img class="carPic" src="../../assets/car-img/mazda_3.png">
-    </ion-slide>
-    <ion-slide>
-      <img class="carPic1" src="../../assets/car-img/mazda3.png">
-    </ion-slide>
-    <ion-slide>
-      <img class="carPic" src="../../assets/car-img/mazda_3.png">
-    </ion-slide>
-  </ion-slides>
-</div>
-
-<div class="driver">
-<ion-list-header style="font-size: 125%;"> Driver/Owner </ion-list-header>
-
-<ion-item>
-  <ion-avatar slot="start">
-    <img src="../../assets/driver-pic/crymeme.jpg" />
-  </ion-avatar>
-  <ion-label>
-    <h5>Aldrin Villalobos</h5>
-  </ion-label>
-  <ion-icon name="chatbubble-ellipses-outline" style="color: black;"></ion-icon> &nbsp; &nbsp;
-  <ion-icon name="call" style="color: black;"></ion-icon>
-</ion-item>
-</div>
-
-<div class="specification">
-  <ion-list-header style="font-size: 125%;"> Specification </ion-list-header>
-  
-  <ion-slides [options]="sliderOptions" id="new-listings">
-
-    <ion-slide>
-      <ion-card class="shadow-normal card-primary">
-        <ion-card-content>
-          <ion-row class="">
-            <img class="icon" src="../../assets/icon/speedometer (1).png" />
-          </ion-row>
-        </ion-card-content>
-        <ion-row class="stick-bottom ion-margin">
-          <div >
-            <ion-card-subtitle>100 km/h</ion-card-subtitle>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="shadow-normal card-primary">
-        <ion-card-content>
-          <ion-row class="car-image-box">
-            <img class="icon" src="../../assets/icon/car (2).png" />
-          </ion-row>
-        </ion-card-content>
-        <ion-row class="stick-bottom ion-margin">
-          <div >
-            <ion-card-subtitle>Liftback</ion-card-subtitle>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card class="shadow-normal card-primary">
-        <ion-card-content>
-          <ion-row class="car-image-box">
-            <img class="icon" src="../../assets/icon/car-seat.png" />
-          </ion-row>
-        </ion-card-content>
-        <ion-row class="stick-bottom ion-margin">
-          <div >
-            <ion-card-subtitle>4 seaters</ion-card-subtitle>
-          </div>
-        </ion-row>
-      </ion-card>
-    </ion-slide>
-
+  <div class="car_pic text-center">
+    <ion-icon name="arrow-back" color="light" class="float-left"  size="large"></ion-icon>
+    <ion-icon name="heart-outline" color="light" class="float-right" size="large"></ion-icon>
+    <div class="car_slides">
+    <ion-slides [options]="sliderOptions">  
+      <ion-slide>
+        <img src="../../assets/car-img/mazda3.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/car-img/580b585b2edbce24c47b2cca.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/car-img/ford_ranger.png">
+      </ion-slide>
     </ion-slides>
+  </div>
+  </div>
+
+  <div class="ion-padding car_name">
+    <h2>Mazda 3
+      <ion-chip class="float-right">
+        <ion-avatar >
+          <img src="../../assets/driver-pic/Vignettes-willie.jpg">
+        </ion-avatar>
+        <ion-label>4.5 <span class="fa fa-star checked"></span></ion-label>
+      </ion-chip>
+    </h2>
+  </div>
+
+
+<div class="ion-padding text-center">
+    <ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+      <ion-segment-button value="first" checked>
+        Overall
+      </ion-segment-button>
+      <ion-segment-button value="second">
+        Owner
+      </ion-segment-button>
+      <ion-segment-button value="third">
+        Date & Location
+      </ion-segment-button>
+      <ion-segment-button value="fourth">
+        Reviews
+      </ion-segment-button>
+    </ion-segment>
+
+  
+    
+    <div [ngSwitch]="type">
+      <ion-slides [options]="sliderBrands" class="type">  
+      <ion-slide>
+        <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+          <ion-card-header>
+            <img class="specs" src="../../assets/icon/speedometer (2).png">
+          </ion-card-header>
+          <ion-card-content>
+            <p>5.6s</p>
+            <h7>0-100km/h</h7>
+          </ion-card-content>
+        </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+        <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+          <ion-card-header>
+            <img class="specs" src="../../assets/icon/car-seat.png">
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>4</p>
+            <h7>Seats</h7>
+          </ion-card-content>
+        </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+        <ion-card-header>
+          <img class="specs" src="../../assets/icon/engine.png">
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p>3.0L 1-6</p>
+          <h7>Engine Power</h7>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+        <ion-card-header>
+          <img class="specs" src="../../assets/icon/snowflake.png">
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p>Two-zone</p>
+          <h7>Aircon</h7>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+
+    <ion-slide>
+      <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+        <ion-card-header>
+          <img class="specs" src="../../assets/icon/gas-station.png">
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p>Unleaded</p>
+          <h7>Gas</h7>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
+        <ion-card-header>
+          <img class="specs" src="../../assets/icon/settings.png">
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p>Automatic</p>
+          <h7>Transmission</h7>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="text-left car_details"*ngSwitchCase="'first'">
+    <h5 style="color: black;">Car Details:</h5>
+    <ion-chip outline color="dark">
+      <ion-icon name="checkmark-circle"></ion-icon>
+       <ion-label>With free driver</ion-label>
+    </ion-chip>
+     <ion-chip outline color="dark">
+       <ion-icon name="checkmark-circle"></ion-icon>
+       <ion-label>Complete airbags</ion-label>
+    </ion-chip>
+    <ion-chip outline color="dark">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Full tank to full tank</ion-label>
+     </ion-chip>
+     <ion-chip outline color="dark">
+       <ion-icon name="checkmark-circle"></ion-icon>
+       <ion-label>1 Spare tire</ion-label>
+     </ion-chip>
+     <ion-chip outline color="dark">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Free massage</ion-label>
+    </ion-chip>
+  </div>
+  
+  <div class="text-left" *ngSwitchCase="'second'">
+
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="shadow-normal card-primary" class="driver_item2">
+
+          <ion-card-content>
+            <p class="title">Owner info</p>
+            <div class="titlediv">
+              <p class="title"><img class="icon1" src="../../assets/driver-pic/crymeme.jpg"> John Doe</p>
+              <p class="sciname"><img class="icon" src="../../assets/icon/gender-symbols.png"> Male</p>
+              <p class="sciname"><img class="icon" src="../../assets/icon/age-group.png"> Age</p>
+              <p class="sciname"><img class="icon" src="../../assets/icon/map (1).png"> Address</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row>
+      <ion-col>
+        <ion-card class="driver_item2">
+            <div class="titlediv">
+              <p class="title">John Doe</p>
+              <p class="sciname">Male</p>
+              <p class="sciname">Age</p>
+              <p class="sciname">Address</p>
+            </div>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card-title>Driver</ion-card-title>
+        <ion-card class="driver_item2">
+            <img class="driver_pic" src="../../assets/driver-pic/crymeme.jpg">
+            <div class="titlediv">
+              <p class="title">John Doe</p>
+              <p class="sciname">Professional</p>
+              <p class="sciname1"><img class="icon" src="../../assets/icon/gender-symbols.png"> Male</p>
+              <p class="sciname1"><img class="icon" src="../../assets/icon/age-group.png"> Age</p>
+              <p class="sciname1"><img class="icon" src="../../assets/icon/map (1).png"> Address</p>
+            </div>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+
+
+  </div>
+  
+      <ion-card *ngSwitchCase="'third'" class="driver_item2">
+        <ion-list>
+          <ion-item class="date1">
+            <ion-label position="stacked" style="font-size: 20px;">Pick-up</ion-label>
+            <ion-input placeholder="Pick-up Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
+            <ion-input placeholder="Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
+          </ion-item>
+          <ion-item class="date2">
+            <ion-label position="stacked" style="font-size: 20px;">Drop-off</ion-label>
+            <ion-input placeholder="Drop-off Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
+            <ion-input placeholder="Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card *ngSwitchCase="'fourth'">
+        <ion-card-header>
+          Wow Grapeeeee!!!
+        </ion-card-header>
+        <ion-card-content>
+          Third content
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
 
   </div>
 
-  <div class="location">
-    <ion-list-header style="font-size: 125%;"> Location  &nbsp;<span style="color: #b3b3b3; float: right;">(1000km)</span> </ion-list-header>
-    
-    <ion-item>
-        <img class="map_icon" src="../../assets/icon/map.png" />
-      <ion-label>
-        <h6 class="address">Marawi City, Philippines</h6>
-      </ion-label>
-    </ion-item>
-    </div>
 
-
-    <div class="price_btn">
-      <ion-item>
-        <ion-list-header style="font-size: 120%;"> $ 550.00 <span style="color: #b3b3b3;"> /a day</span> </ion-list-header>
-        <ion-button (click)="presentModal()" style="font-size: 100%;" color="dark" class="btn_book">Book Now</ion-button>
-      </ion-item>
-    </div>
-
-
-
-  
+  <div class="card-body">
+  <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+    <!-- <ion-chip outline color="light">
+    <ion-label>₱ 3,000/a day</ion-label>
+  </ion-chip> -->
+  Book Now</ion-button>
+  </div>
 </ion-content>

@@ -32,9 +32,7 @@ export class Tab3Page {
     const modal = await this.modalCtrl.create({
       component: ViewDriverPage,
       breakpoints: [0, 0.3, 0.5, 0.8],
-      initialBreakpoint: 0.8
-      
-      
+      initialBreakpoint: 0.97,
     });
     await modal.present();
   }

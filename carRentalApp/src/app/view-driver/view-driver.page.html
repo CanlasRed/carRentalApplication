@@ -1,51 +1,103 @@
-<ion-content fullscreen="true" >
+<ion-content [fullscreen]="true">
 
 
-  <div class="card">
-    <div class="header">
       <div class="avatar">
         <img src="../../assets/driver-pic/crymeme.jpg" alt="">
       </div>
-    </div>
-  </div>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="card-body">
     <div class="user-meta ion-text-center">
       <h3 class="playername">John Doe</h3>
       <h5 class="country">Marawi City</h5>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      
       <center>
         <h6 class="ranking">Available Now</h6>
       </center>
       
     </div>
 
-    <ion-item class="driver-info" color="transparent" lines="none">
-      <ion-label slot="start" style="font-size: 105%;">Cars Driven:</ion-label>
-      <ion-label style="font-size: 90%;">SUV, Van, Suden</ion-label>
-    </ion-item>
+    <div class="text-center">
+    <ion-row>
+      <ion-col>
+        <ion-card class="shadow-normal card-primary" class="driver_item">
 
-    <ion-item class="driver-info" color="transparent" lines="none">
-      <ion-label slot="start" style="font-size: 105%;">Contact #:</ion-label>
-      <ion-label style="font-size: 90%;">09123456789</ion-label>
-    </ion-item>
+          <ion-card-header>
+            <img src="../../assets/icon/time.png">
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>Hour rate</p>
+            <h7>250<span>/hour</span></h7>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="shadow-normal card-primary" class="driver_item">
 
-    <ion-item class="driver-info" color="transparent" lines="none">
-      <ion-label slot="start" style="font-size: 105%;">Address:</ion-label>
-      <ion-label style="font-size: 90%;">Blk.1 Gordon Heights, Olongapo City</ion-label>
-    </ion-item>
+          <ion-card-header>
+            <img src="../../assets/icon/calendar (5).png">
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>Day rate</p>
+            <h7>1000<span>/day</span></h7>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
     
 
-
+    <div>
+      <ion-row>
+        <ion-col>
+          <ion-card class="shadow-normal card-primary" class="driver_item">
+  
+            <ion-card-content>
+              <ion-card-subtitle>Type</ion-card-subtitle>
+              <ion-chip outline color="dark">
+                <ion-label>Sedan</ion-label>
+              </ion-chip>
+              <ion-chip outline color="dark">
+                <ion-label>SUV</ion-label>
+              </ion-chip>
+              <ion-chip outline color="dark">
+                <ion-label>Van</ion-label>
+              </ion-chip>
+            </ion-card-content>
+        
+            <ion-card-content class="cn">
+              <ion-card-subtitle>Contact Number</ion-card-subtitle>
+              <ion-chip outline color="dark">
+                <ion-label>09982115529</ion-label>
+              </ion-chip>
+            </ion-card-content>
+        
+            <ion-card-content class="add">
+              <ion-card-subtitle>Address</ion-card-subtitle>
+              <ion-chip outline color="dark">
+                <ion-label>San Antonio, Cabangan, Zambales</ion-label>
+              </ion-chip>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
       
 
     
 
 
-    <ion-button (click)="booknow();" expand="full" shape="round" color="dark">Book Now</ion-button>
-
-    <ion-button (click)="presentModal();" expand="full" shape="round" color="light" hidden>Message</ion-button><div style="margin-top: 1rem;"></div>
-
-    <ion-button expand="full" shape="round" color="light" hidden>Call</ion-button><div style="margin-top: 1rem;" ></div>
+    <ion-button (click)="booknow();" expand="full" shape="round" color="dark" class="btn_book">Book Now</ion-button>
   </div>
 </ion-content>
 

@@ -1,34 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "bootstrap";
 
+*{
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
 
-.card {
-    margin: 0 auto;
-
-    .header {
+ion-content{
+    --ion-background-color: white;
+}
         
-
         .avatar {
             width: 160px;
             height: 160px;
             position: relative;
             margin: 0 auto;
-
+            margin-top: -45px;
+            color: white;
             img {
                 display: block;
                 border-radius: 50%;
                 position: absolute;
                 bottom: calc(-1*(80px + 4px));
-                border: 8px solid black;
-                background-color: #fff;
+                border: 6px solid black;
+                background-color: white;
             }
         }
-    }
-}
-
+     
 .card-body {
     background-color: #ffffff;
-    padding: 30px;
-    height: calc(100vh - (200px + 56px));
-    overflow: hidden;
+
+    height: auto;
+
 
     .user-meta {
         padding-top: 40px;
@@ -37,6 +41,7 @@
             font-size: 24px;
             font-weight: 600;
             color: #303940;
+            margin-top: 40px;
         }
 
         .country {
@@ -57,3 +62,38 @@
     font-size: 0.9rem;
 }
 
+.checked {
+    color: orange;
+}
+
+.driver_item{
+    border-radius: 20px;
+    margin-top: 0%;
+    --padding-end: 0px;
+  --inner-padding-end: 0px;
+  background-color: white;
+  }
+
+.icon{
+    max-width: 100px;
+}
+
+ion-card{
+    display: block;
+    //flex-direction: column;
+    max-width: 100%;
+    margin: 1 !important;
+    border-radius: 10%;
+}
+
+.cn{
+    margin-top: -5%;
+}
+
+.add{
+    margin-top: -5%;
+}
+
+.btn_book{
+    height: 50px;
+}
