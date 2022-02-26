@@ -44,11 +44,11 @@ ion-card-subtitle{
 }
 
 p{
-    color: white;
+    color: black;
 }
 
 h7{
-    color: white;
+    color: black;
 }
 
 .car_pic{
@@ -61,7 +61,7 @@ h7{
 }
 
 .specs{
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .btn_book{
@@ -77,8 +77,9 @@ h7{
     margin-top: 15%;
     --padding-end: 0px;
   --inner-padding-end: 0px;
-  background-color: black;
+  background-color: white;
   width: 300px;
+  color: black;
 }
 
 .driver_item2{
@@ -92,6 +93,15 @@ h7{
 .checked {
     color: orange;
 }
+
+.checked1 {
+    color: orange;
+}
+
+.stars{
+    max-width: 10px;
+}
+
 
 .car_name{
     margin-top: 2%;
@@ -129,6 +139,13 @@ h7{
     color: black;
 }
 
+.license{
+    font-size: 15px;
+    opacity: 90%;
+    margin-top: -15px;
+    color: black;
+}
+
 .sciname{
     font-size: 15px;
     opacity: 90%;
@@ -148,4 +165,24 @@ h7{
 
 #back_btn{
     max-width: 100px;
+}
+
+.input-format {
+    text-align: left !important;
+    box-shadow: 0 3px 10px rgba(189, 189, 189, 0.424);
+    // width: 85%;
+    border-radius: 0.5rem;
+    padding: 8px !important;
+}
+
+.date2{
+    margin-top: 5%;
+}
+
+#sub{
+    font-size: 12px;
+}
+
+.rate{
+    margin-top: 5%;
 }

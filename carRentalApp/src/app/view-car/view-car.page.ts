@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BookNowPage } from '../book-now/book-now.page';
-
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-view-car',
@@ -9,6 +9,14 @@ import { BookNowPage } from '../book-now/book-now.page';
   styleUrls: ['./view-car.page.scss'],
 })
 export class ViewCarPage implements OnInit {
+  @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
+  sliderOne: any;
+  slideOptsOne = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    autoplay: true
+  };
+
   type: string;
 
   selectedSlide: any;
@@ -29,7 +37,20 @@ export class ViewCarPage implements OnInit {
     speed: 400
   }
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController) {
+    this.sliderOne =
+    {
+      isBeginningSlide: true,
+      isEndSlide: false,
+      slidesItems: [
+        {
+          id: 1
+        }
+      ]
+    };
+
+
+   }
 
   async presentModal() {
     const modal = await this.modalCtrl.create({

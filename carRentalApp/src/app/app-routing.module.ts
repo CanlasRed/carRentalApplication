@@ -53,6 +53,10 @@ const routes: Routes = [
     path: 'view-messages',
     loadChildren: () => import('./view-messages/view-messages.module').then( m => m.ViewMessagesPageModule)
   },
+  {
+    path: 'booked',
+    loadChildren: () => import('./booked/booked.module').then( m => m.BookedPageModule)
+  },
 
 
 ];
