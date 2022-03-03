@@ -107,6 +107,22 @@ h7{
     margin-top: 2%;
 }
 
+.driver_list{
+    border-radius: 20px;
+    max-height: fit-content;
+}
+
+.driver_item{
+    --padding-end: 0px;
+  --inner-padding-end: 0px;
+}
+
+.rounded{
+    border-radius: 100% !important;
+    max-width: 100%;
+    margin-right: 5%;
+}
+
 .img{
     max-width: 100%;
     max-height: 100%;
@@ -184,5 +200,14 @@ h7{
 }
 
 .rate{
+    margin-top: 5%;
+}
+
+.safety{
+    margin-right: 2%;
+}
+
+.reviews{
+    border-radius: 15px;
     margin-top: 5%;
 }

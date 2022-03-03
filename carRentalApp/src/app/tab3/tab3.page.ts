@@ -25,6 +25,7 @@ export class Tab3Page {
     slidesPerView: 1.05,
     speed: 400
   }
+  
 
   constructor(private modalCtrl: ModalController) {}
 
@@ -36,5 +37,6 @@ export class Tab3Page {
     });
     await modal.present();
   }
+
 
 }

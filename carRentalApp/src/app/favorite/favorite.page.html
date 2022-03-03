@@ -1,0 +1,33 @@
+<ion-content>
+    <ion-item>
+        <h2 style="font-size: 125%;">Favorites</h2>
+        <ion-icon name="funnel-outline" slot="end"></ion-icon>
+      </ion-item>
+    <div class="text-center">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-card class="shadow-normal card-primary" class="driver_item" [routerLink]="['/view-car']">
+                <ion-card-header>
+                  <img src="../../assets/car-img/ford_ranger.png">
+                </ion-card-header>
+                <ion-card-content>
+                  <p>Ford Ranger Wildtrak</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+
+            <ion-col>
+                <ion-card class="shadow-normal card-primary" class="driver_item">
+                  <ion-card-header>
+                    <img src="../../assets/car-img/ford_ranger.png">
+                  </ion-card-header>
+                  <ion-card-content>
+                    <p>Ford Ranger Wildtrak</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

@@ -57,6 +57,10 @@ const routes: Routes = [
     path: 'booked',
     loadChildren: () => import('./booked/booked.module').then( m => m.BookedPageModule)
   },
+  {
+    path: 'favorite',
+    loadChildren: () => import('./favorite/favorite.module').then( m => m.FavoritePageModule)
+  },
 
 
 ];

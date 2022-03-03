@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="car_pic text-center">
-    <ion-icon name="arrow-back" color="light" class="float-left"  size="large"></ion-icon>
+    <ion-icon name="arrow-back" color="light" class="float-left"  size="large" (click)="back();"></ion-icon>
     <ion-icon name="heart-outline" color="light" class="float-right" size="large"></ion-icon>
     <div class="car_slides">
     <ion-slides pager="true" [options]="sliderOptions" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">  
@@ -21,13 +21,14 @@
 
   <div class="ion-padding car_name">
     <h2>Mazda 3
-      <ion-chip class="float-right">
-        <ion-avatar >
-          <img src="../../assets/driver-pic/Vignettes-willie.jpg">
-        </ion-avatar>
-        <ion-label>4.5 <span class="fa fa-star checked"></span></ion-label>
+      <ion-chip class="float-right" color="success">
+        <ion-label>Great Deal</ion-label>
+      </ion-chip>
+      <ion-chip >
+        <ion-label><span class="fa fa-star checked"></span> 4.5</ion-label>
       </ion-chip>
     </h2>
+    <p>Sedan</p>
   </div>
 
 
@@ -43,6 +44,9 @@
         Pick Up & Drop Off
       </ion-segment-button>
       <ion-segment-button value="fourth">
+        Safety
+      </ion-segment-button>
+      <ion-segment-button value="fifth">
         Reviews
       </ion-segment-button>
     </ion-segment>
@@ -80,12 +84,12 @@
     <ion-slide>
       <ion-card *ngSwitchCase="'first'" class="shadow-normal card-primary" class="driver_item">
         <ion-card-header>
-          <img class="specs" src="../../assets/icon/car-seat (1).png">
+          <img class="specs" src="../../assets/icon/settings (2).png">
         </ion-card-header>
       
         <ion-card-content>
-          <p id="sub">4</p>
-          <h7 class="main">Seats</h7>
+          <p id="sub">Automatic</p>
+          <h7 class="main">Transmission</h7>
         </ion-card-content>
       </ion-card>
     </ion-slide>
@@ -125,45 +129,60 @@
           </ion-card-content>
         </ion-card>
 
+        <div class="card-body" >
+          <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+            <ion-chip outline color="light">
+            <ion-label>₱ 3,000/a day</ion-label>
+          </ion-chip>
+          Book Now</ion-button>
+          </div>
 
   </div>
 
   <div class="text-left car_details"*ngSwitchCase="'second'">
     <h5 style="color: black;">Car Details:</h5>
-    <ion-chip outline color="dark">
-      <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-      <img class="specs" src="../../assets/icon/flame.png">
-       <ion-label>Unleaded</ion-label>
-    </ion-chip>
-     <ion-chip outline color="dark">
-       <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-       <img class="specs" src="../../assets/icon/snowflake (1).png">
-       <ion-label>Air Conditioning</ion-label>
-    </ion-chip>
-    <ion-chip outline color="dark">
-      <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-      <img class="specs" src="../../assets/icon/speedometer (5).png">
-      <ion-label>Unlimited Mileage</ion-label>
-     </ion-chip>
-     <ion-chip outline color="dark">
-       <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-       <img class="specs" src="../../assets/icon/car (4).png">
-       <ion-label>4 Doors</ion-label>
-     </ion-chip>
-     <ion-chip outline color="dark">
-      <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-      <img class="specs" src="../../assets/icon/settings (1).png">
-      <ion-label>Automatic</ion-label>
-    </ion-chip>
-    <ion-chip outline color="dark">
-      <!-- <ion-icon name="checkmark-circle"></ion-icon> -->
-      <img class="specs" src="../../assets/icon/gas-station (1).png">
-      <ion-label>Fuel info: Full to full</ion-label>
-    </ion-chip>
+
+    <ion-item>
+      <img class="safety" src="../../assets/icon/car-seat (2).png">
+      <h7 style="font-size: 14px;">4 Seats</h7>
+    </ion-item>
+
+      <ion-item>
+        <img class="safety" src="../../assets/icon/flame.png">
+        <h7 style="font-size: 14px;">Unleaded</h7>
+      </ion-item>
+
+       <ion-item>
+        <img class="safety" src="../../assets/icon/snowflake (1).png">
+        <h7 style="font-size: 14px;">Air Conditioning</h7 >
+      </ion-item>
+
+      <ion-item>
+        <img class="safety" src="../../assets/icon/speedometer (5).png">
+        <h7 style="font-size: 14px;">Unlimited Mileage</h7>
+      </ion-item>
+
+       <ion-item>
+        <img class="safety" src="../../assets/icon/car (4).png">
+        <h7 style="font-size: 14px;">4 Doors</h7>
+      </ion-item>
+
+      <ion-item>
+        <img class="safety" src="../../assets/icon/gas-station (1).png">
+        <h7 style="font-size: 14px;">Fuel info: Full to full</h7>
+      </ion-item>
+
+      <div class="card-body" >
+        <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+          <ion-chip outline color="light">
+          <ion-label>₱ 3,000/a day</ion-label>
+        </ion-chip>
+        Book Now</ion-button>
+        </div>
+
   </div>
   
     <div *ngSwitchCase="'third'" class="ion-padding text-left">
-      <!-- <p style="color: black;">Pick Up & Drop Off</p> -->
 
           <ion-item class="input-format">
             <ion-label position="stacked">From</ion-label>
@@ -180,17 +199,54 @@
 
     </div>
 
+    <div class="card-body" *ngSwitchCase="'third'">
+      <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+        <ion-chip outline color="light">
+        <ion-label>₱ 3,000/a day</ion-label>
+      </ion-chip>
+      Book Now</ion-button>
+    </div>
 
-      <!-- <ion-card *ngSwitchCase="'fourth'">
-        <ion-card-header>
-          Wow Grapeeeee!!!
-        </ion-card-header>
-        <ion-card-content>
-          Third content
-        </ion-card-content>
-      </ion-card> -->
 
-      <div *ngSwitchCase="'fourth'" class="rate">
+    <div class="text-left car_details" *ngSwitchCase="'fourth'">
+      <h5 style="color: black;">Cleaning and safety practices:</h5>
+
+        <ion-item>
+          <img class="safety" src="../../assets/icon/clean.png">
+          <h7 style="font-size: 14px;"> Enhanced cleaning of vehicles</h7>
+        </ion-item>
+
+         <ion-item>
+          <img class="safety" src="../../assets/icon/smartphone.png">
+          <h7 style="font-size: 14px;"> Minimal contact with option to check-in online</h7 >
+        </ion-item>
+
+        <ion-item>
+          <img class="safety" src="../../assets/icon/wiping-sprayer-tool.png">
+          <h7 style="font-size: 14px;"> Cleanliness and safety measures at pick-up locations</h7>
+        </ion-item>
+
+         <ion-item>
+          <img class="safety" src="../../assets/icon/face-mask.png">
+          <h7 style="font-size: 14px;"> Other safety measures for customers</h7>
+        </ion-item>
+
+        <ion-item>
+          <img class="safety" src="../../assets/icon/wash.png">
+          <h7 style="font-size: 14px;"> Staff health and safety measures</h7>
+        </ion-item>
+
+        <div class="card-body" >
+          <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+            <ion-chip outline color="light">
+            <ion-label>₱ 3,000/a day</ion-label>
+          </ion-chip>
+          Book Now</ion-button>
+          </div>
+
+    </div>
+
+      <div *ngSwitchCase="'fifth'" class="rate">
         <h2>4.5
           <span class="fa fa-star checked1"></span>
           <span class="fa fa-star checked1"></span>
@@ -199,6 +255,27 @@
           <span class="fa fa-star "></span>
         </h2>
 
+        <ion-card class="reviews">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/driver-pic/Vignettes-willie.jpg" />
+          </ion-avatar>
+          <ion-label>
+            <h6>Finn</h6>
+            <span class="fa fa-star checked1"></span>
+            <span class="fa fa-star checked1"></span>
+            <span class="fa fa-star checked1"></span>
+            <span class="fa fa-star checked1"></span>
+            <span class="fa fa-star "></span>
+            <p>Listen, I've had a pretty messed up day...</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+
+      <div class="card-body" >
+        <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+        Create review</ion-button>
+        </div>
 
       </div>
 
@@ -208,11 +285,5 @@
   </div>
 
 
-  <div class="card-body">
-  <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
-    <!-- <ion-chip outline color="light">
-    <ion-label>₱ 3,000/a day</ion-label>
-  </ion-chip> -->
-  Book Now</ion-button>
-  </div>
+
 </ion-content>

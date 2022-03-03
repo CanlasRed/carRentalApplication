@@ -1,0 +1,23 @@
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-card{
+    display: block;
+    //flex-direction: column;
+    max-width: 100%;
+    margin: 1 !important;
+    border-radius: 10%;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+  }
+
+.driver_item{
+    border-radius: 20px;
+    margin-top: 5%;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}

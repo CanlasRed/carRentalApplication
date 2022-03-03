@@ -26,8 +26,8 @@
     <div class="text-center">
     <ion-row>
       <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
+        <ion-card class="shadow-normal card-primary " class="driver_item ion-activatable ripple-parent" (click)="someFunction()">
+          <ion-ripple-effect></ion-ripple-effect>
           <ion-card-header>
             <img src="../../assets/icon/time.png">
           </ion-card-header>
@@ -39,8 +39,8 @@
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
+        <ion-card class="shadow-normal card-primary" class="driver_item ion-activatable ripple-parent" (click)="someFunction()">
+          <ion-ripple-effect></ion-ripple-effect>
           <ion-card-header>
             <img src="../../assets/icon/calendar (5).png">
           </ion-card-header>
@@ -97,7 +97,7 @@
     
 
 
-    <ion-button (click)="booknow();" expand="full" shape="round" color="dark" class="btn_book">Book Now</ion-button>
+    <ion-button (click)="presentAlert();" expand="full" shape="round" color="dark" class="btn_book">Book Now</ion-button>
   </div>
 </ion-content>
 

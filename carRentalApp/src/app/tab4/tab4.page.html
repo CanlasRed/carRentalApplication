@@ -1,7 +1,7 @@
 <ion-content>
 
   <ion-item>
-    <ion-icon name="arrow-back-outline" size="large" class="btn_back"></ion-icon>
+    <!-- <ion-icon name="arrow-back-outline" size="large" class="btn_back"></ion-icon> -->
     <ion-icon (click)="presentModal()" slot="end" name="receipt-outline" class="btn_back"></ion-icon>
   </ion-item>
 
@@ -12,6 +12,13 @@
     <ion-icon name="location" style="color: gray;"></ion-icon><span style="font-size: 100%;">&nbsp; Cabangan, Zambales</span>
     <!-- <h2 style="font-family: OpenSans; font-size: 100%;">Edit</h2> -->
   </div>
+
+  <div class="text-center">
+  <ion-chip outline color="primary" (click)="favorites();">
+    <!-- <ion-icon name="heart"></ion-icon> -->
+    <ion-label >Favorites</ion-label>
+  </ion-chip>
+</div>
 
   <div class="payment">
     <ion-item>

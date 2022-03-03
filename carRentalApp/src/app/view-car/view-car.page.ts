@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BookNowPage } from '../book-now/book-now.page';
 import { IonSlides } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-car',
@@ -37,7 +38,7 @@ export class ViewCarPage implements OnInit {
     speed: 400
   }
 
-  constructor(private modalCtrl: ModalController) {
+  constructor(private modalCtrl: ModalController, private router: Router) {
     this.sliderOne =
     {
       isBeginningSlide: true,
@@ -56,7 +57,7 @@ export class ViewCarPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: BookNowPage,
       breakpoints: [0, 0.3, 0.5, 0.8],
-      initialBreakpoint: 0.6
+      initialBreakpoint: 0.7
       
       
     });
@@ -68,6 +69,10 @@ export class ViewCarPage implements OnInit {
   }
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
+  }
+
+  back(){
+    this.router.navigate(['/tabs/tab1'])
   }
 
 }
