@@ -15,6 +15,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   
@@ -86,10 +87,10 @@
   </ion-item>
 
 
-<ion-item class="driver">
+<!-- <ion-item class="driver">
   <h3 style="font-size: 100%; color: gray;">With Driver</h3>
   <ion-toggle slot="end" name="blackberry" color="dark" checked></ion-toggle>
-</ion-item>
+</ion-item> -->
 </div>
 
 
@@ -103,15 +104,17 @@
         <ion-card class="shadow-normal card-primary" class="driver_item">
 
           <ion-card-header>
+            <!-- <ion-chip>
+              <ion-label><span class="fa fa-star checked"></span> 4.5</ion-label>
+            </ion-chip> -->
             <img src="../../assets/car-img/ford_ranger.png">
           </ion-card-header>
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-              <ion-icon name="person" class="icon"></ion-icon>
+              <ion-icon name="person" class="icon" color="dark"></ion-icon>
               <span class="text">4</span>
-              <ion-icon name="person-remove" class="icon"></ion-icon>
-              <span class="text">0</span>
+              <img src="../../assets/icon/seatbelt.png">
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
             <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -127,10 +130,8 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
+            <ion-icon name="person" class="icon" color="dark"></ion-icon>
             <span class="text">4</span>
-            <ion-icon name="person-add" class="icon"></ion-icon> 
-            <span class="text">1</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
             <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details"  [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -149,10 +150,8 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
+            <ion-icon name="person" class="icon" color="dark"></ion-icon>
             <span class="text">4</span> 
-            <ion-icon name="person-remove" class="icon"></ion-icon>
-            <span class="text">0</span>
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
             <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
@@ -168,10 +167,9 @@
         
           <ion-card-content>
             <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
+            <ion-icon name="person" class="icon" color="dark"></ion-icon>
             <span class="text">4</span>
-            <ion-icon name="person-add" class="icon"></ion-icon> 
-            <span class="text">1</span>
+            <img src="../../assets/icon/seatbelt.png">
             <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
             <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>

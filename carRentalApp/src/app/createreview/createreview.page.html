@@ -1,0 +1,88 @@
+<ion-content [fullscreen]="true">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="car_pic text-center">
+    <ion-icon name="arrow-back" color="light" class="float-left"  size="large" (click)="back();"></ion-icon>
+    <div class="car_slides">
+    <ion-slides pager="true" [options]="sliderOptions" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">  
+      <ion-slide *ngFor="let s of sliderOne.slidesItems">
+        <img src="../../assets/car-img/mazda3.png">
+      </ion-slide>
+      <ion-slide *ngFor="let s of sliderOne.slidesItems">
+        <img src="../../assets/car-img/580b585b2edbce24c47b2cca.png">
+      </ion-slide>
+      <ion-slide *ngFor="let s of sliderOne.slidesItems">
+        <img src="../../assets/car-img/ford_ranger.png">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  </div>
+
+  <div class="ion-padding car_name">
+    <h6>Create Review</h6>
+    <h2>Mazda 3
+      <ion-chip class="float-right" color="success">
+        <ion-label>Great Deal</ion-label>
+      </ion-chip>
+      <ion-chip >
+        <ion-label><span class="fa fa-star checked"></span> 4.5</ion-label>
+      </ion-chip>
+    </h2>
+    <p>Sedan</p>
+  </div>
+
+  <div class="text-center rate">
+    <h2>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </h2>
+  </div>
+
+  <div class="ion-padding text-left" id="textarea">
+    <ion-item class="input-format">
+      <ion-textarea class="review" placeholder="Share your experience and help others make better choices!"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="card-body" >
+    <ion-button (click)="review();" expand="full" shape="round" color="dark" class="btn_book">
+    Submit</ion-button>
+    </div>
+
+  <!-- <div class="ion-padding ">
+    <ion-slides [options]="sliderBrands" class="type">  
+
+      <ion-slide>  
+        <ion-chip outline color="dark">
+          <ion-label>Excellent car</ion-label>
+        </ion-chip>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-chip outline color="dark">
+          <ion-label>Accommodating</ion-label>
+        </ion-chip>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-chip outline color="dark">
+          <ion-label>Graaappeee</ion-label>
+        </ion-chip>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-chip outline color="dark">
+          <ion-label>Will book again</ion-label>
+        </ion-chip>
+      </ion-slide>
+
+    </ion-slides>
+  </div> -->
+
+
+
+</ion-content>

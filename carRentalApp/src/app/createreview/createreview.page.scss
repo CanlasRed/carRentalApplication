@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "bootstrap";
+
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+  }
+
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+.car_pic{
+    background-color: black;
+    padding: 30px;
+}
+
+.car_slides{
+    margin-top: 15%;
+}
+
+.car_name{
+    margin-top: 2%;
+}
+
+.checked {
+    color: orange;
+}
+
+.input-format {
+    text-align: left !important;
+    box-shadow: 0 3px 10px rgba(189, 189, 189, 0.424);
+    // width: 85%;
+    border-radius: 0.5rem;
+    padding: 8px !important;
+}
+
+#textarea{
+    margin-top: -5%;
+}
+
+.review{
+    height: 120px;
+}
+
+.btn_book{
+    height: 50px;
+}
+
+.rate{
+    margin-bottom: 8%;
+    margin-top: -5%;
+}

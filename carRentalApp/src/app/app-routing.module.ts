@@ -61,6 +61,10 @@ const routes: Routes = [
     path: 'favorite',
     loadChildren: () => import('./favorite/favorite.module').then( m => m.FavoritePageModule)
   },
+  {
+    path: 'createreview',
+    loadChildren: () => import('./createreview/createreview.module').then( m => m.CreatereviewPageModule)
+  },
 
 
 ];

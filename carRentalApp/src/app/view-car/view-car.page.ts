@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BookNowPage } from '../book-now/book-now.page';
+import { CreatereviewPage } from '../createreview/createreview.page';
 import { IonSlides } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -64,6 +65,8 @@ export class ViewCarPage implements OnInit {
     await modal.present();
   }
 
+  
+
   ngOnInit() {
     this.type = 'first';
   }
@@ -73,6 +76,10 @@ export class ViewCarPage implements OnInit {
 
   back(){
     this.router.navigate(['/tabs/tab1'])
+  }
+
+  review(){
+    this.router.navigate(['/createreview'])
   }
 
 }
