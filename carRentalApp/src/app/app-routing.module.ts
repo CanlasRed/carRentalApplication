@@ -65,6 +65,10 @@ const routes: Routes = [
     path: 'createreview',
     loadChildren: () => import('./createreview/createreview.module').then( m => m.CreatereviewPageModule)
   },
+  {
+    path: 'booking',
+    loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
+  },
 
 
 ];

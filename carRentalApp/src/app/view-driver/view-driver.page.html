@@ -10,7 +10,7 @@
   <div class="card-body">
     <div class="user-meta ion-text-center">
       <h3 class="playername">John Doe</h3>
-      <h5 class="country">Marawi City</h5>
+      <p id="desc">2 years driving experience of Victory Line bus. Knowledgeable on locations around Luzon.</p>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
@@ -33,8 +33,8 @@
           </ion-card-header>
         
           <ion-card-content>
-            <p>Hour rate</p>
-            <h7>250<span>/hour</span></h7>
+            <h6 class="rate_class">Hour rate</h6>
+            <h7 class="rate">250<span>/hour</span></h7>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -46,8 +46,8 @@
           </ion-card-header>
         
           <ion-card-content>
-            <p>Day rate</p>
-            <h7>1000<span>/day</span></h7>
+            <h6 class="rate_class">Day rate</h6>
+            <h7 class="rate">1000<span>/day</span></h7>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -63,29 +63,30 @@
           <ion-card class="shadow-normal card-primary" class="driver_item">
   
             <ion-card-content>
-              <ion-card-subtitle>Type</ion-card-subtitle>
-              <ion-chip outline color="dark">
-                <ion-label>Sedan</ion-label>
+              <ion-card-subtitle class="info">Type</ion-card-subtitle>
+              <ion-chip outline color="dark" *ngFor="let item of types">
+                <ion-label class="info_type">{{ item.type }}</ion-label>
               </ion-chip>
-              <ion-chip outline color="dark">
-                <ion-label>SUV</ion-label>
-              </ion-chip>
-              <ion-chip outline color="dark">
-                <ion-label>Van</ion-label>
+            </ion-card-content>
+
+            <ion-card-content class="cn">
+              <ion-card-subtitle class="info">Transmission</ion-card-subtitle>
+              <ion-chip outline color="dark" *ngFor="let item of transmission">
+                <ion-label class="info_type">{{ item.type }}</ion-label>
               </ion-chip>
             </ion-card-content>
         
             <ion-card-content class="cn">
-              <ion-card-subtitle>Contact Number</ion-card-subtitle>
-              <ion-chip outline color="dark">
-                <ion-label>09982115529</ion-label>
+              <ion-card-subtitle class="info">Contact Number</ion-card-subtitle>
+              <ion-chip outline color="dark" *ngFor="let item of contact">
+                <ion-label class="info_type">{{ item.number }}</ion-label>
               </ion-chip>
             </ion-card-content>
         
             <ion-card-content class="add">
-              <ion-card-subtitle>Address</ion-card-subtitle>
-              <ion-chip outline color="dark">
-                <ion-label>San Antonio, Cabangan, Zambales</ion-label>
+              <ion-card-subtitle class="info">Address</ion-card-subtitle>
+              <ion-chip outline color="dark" *ngFor="let item of address">
+                <ion-label class="info_type">{{ item.location }}</ion-label>
               </ion-chip>
             </ion-card-content>
           </ion-card>

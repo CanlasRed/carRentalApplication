@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BookedPage } from '../booked/booked.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-now',
@@ -38,7 +39,7 @@ export class BookNowPage implements OnInit {
     },
   };
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private router: Router) { }
   
 
   async presentModal() {
@@ -53,6 +54,10 @@ export class BookNowPage implements OnInit {
   
 
   ngOnInit() {
+  }
+
+  back(){
+    this.router.navigate(['/view-car'])
   }
 
 

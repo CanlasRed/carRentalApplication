@@ -35,13 +35,18 @@
     src: url('../assets/fonts/Poppins-Bold.ttf');
 }
 
-@font-face {   
-    font-family: 'OpenSans-Medium';
-    src: url('../assets/fonts/OpenSans-Medium.ttf');
-}
-
 .my-custom-class {
     --backdrop-opacity: 0.2;
     --background: white;
     font-family: 'Poppins', sans-serif;
+}
+
+.toast-custom-class {
+    --color:#ffffff;
+    --border-color:#000000;
+    --border-radius:10px;
+    --border-style:solid;
+    --border-width:3px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }

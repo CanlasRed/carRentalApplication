@@ -83,7 +83,7 @@
 <div class="available">
   <ion-item>
     <h2 style="font-size: 125%;">Available Cars</h2>
-    <ion-icon name="funnel-outline" slot="end"></ion-icon>
+    <ion-icon name="funnel" color="dark" slot="end"></ion-icon>
   </ion-item>
 
 
@@ -99,79 +99,25 @@
 <div>
   <ion-grid>
 
-    <ion-row>
+    <ion-row *ngFor="let item of available">
       <ion-col>
         <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <!-- <ion-chip>
-              <ion-label><span class="fa fa-star checked"></span> 4.5</ion-label>
-            </ion-chip> -->
-            <img src="../../assets/car-img/ford_ranger.png">
+          <!-- <div class="ribbon ribbon-top-right"><span><ion-icon name="person-add" color="light"></ion-icon></span></div> -->
+          <div class="ribbon ribbon-top-right"><span><ion-icon name="person-add" color="light" size="medium"></ion-icon></span></div>
+          <ion-card-header class="text-center">
+            <img class="car_pic" src="../../assets/car-img/Ford_Ranger_Wildtrak-removebg-preview.png">
           </ion-card-header>
         
           <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
+            <h7 class="carname">{{ item.carname }}</h7>
+            <div class="icons">
               <ion-icon name="person" class="icon" color="dark"></ion-icon>
-              <span class="text">4</span>
-              <img src="../../assets/icon/seatbelt.png">
-            <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon" color="dark"></ion-icon>
-            <span class="text">4</span>
-            <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details"  [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon" color="dark"></ion-icon>
-            <span class="text">4</span> 
-            <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon" color="dark"></ion-icon>
-            <span class="text">4</span>
-            <img src="../../assets/icon/seatbelt.png">
-            <!-- <img src="../../assets/car-logo/ford-logo.png" class="logo"> -->
-            <p class="price">16,000<span style="color: #b3b3b3;"> /a day</span></p>
+              <span class="text">{{ item.seats }}</span>
+            </div>
+            <h7 class="price">{{ item.price }}</h7>
+            <!-- <ion-chip class="price ion-padding" outline color="dark">
+              <ion-label *ngFor="let item of available">{{ item.price }}</ion-label>
+            </ion-chip> -->
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>
@@ -193,70 +139,21 @@
 <div class="recom">
   <ion-grid>
 
-    <ion-row>
+    <ion-row *ngFor="let item of recommended">
       <ion-col>
         <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
+          <div class="ribbon ribbon-top-right"><span><ion-icon name="person-add" color="light" size="medium"></ion-icon></span></div>
+          <ion-card-header class="text-center">
+            <img class="car_pic" src="../../assets/car-img/Ford_Ranger_Wildtrak-removebg-preview.png">
           </ion-card-header>
         
           <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
-            <span class="text">4</span> 
-            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
-            <span class="text">4</span> 
-            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
-            <span class="text">4</span> 
-            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
-            <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card class="shadow-normal card-primary" class="driver_item">
-
-          <ion-card-header>
-            <img src="../../assets/car-img/ford_ranger.png">
-          </ion-card-header>
-        
-          <ion-card-content>
-            <p>Ford Ranger Wildtrak</p>
-            <ion-icon name="person" class="icon"></ion-icon>
-            <span class="text">4</span> 
-            <p>16,000<span style="color: #b3b3b3;"> /a day</span></p>
+            <h7 class="carname">{{ item.carname }}</h7>
+            <div class="icons">
+              <ion-icon name="person" class="icon" color="dark"></ion-icon>
+              <span class="text">{{ item.seats }}</span>
+            </div>
+            <h7 class="price">{{ item.price }}</h7>
             <ion-button size="small" color="dark" class="float-right btn_details" [routerLink]="['/view-car']"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></ion-button>
           </ion-card-content>
         </ion-card>

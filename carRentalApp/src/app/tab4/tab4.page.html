@@ -2,97 +2,180 @@
 
   <ion-item>
     <!-- <ion-icon name="arrow-back-outline" size="large" class="btn_back"></ion-icon> -->
-    <ion-icon (click)="presentModal()" slot="end" name="receipt-outline" class="btn_back"></ion-icon>
+    <!-- <ion-icon (click)="presentModal()" slot="end" name="receipt-outline" class="btn_back"></ion-icon> -->
+    <ion-icon (click)="logout();" name="log-out-outline" slot="end" class="btn_back"></ion-icon>
   </ion-item>
 
   
   <div class="text-center">
     <img src="../../assets/driver-pic/crymeme.jpg" class="rounded mx-auto d-block" alt="...">
     <h2>Aldrin Villalobos</h2>
-    <ion-icon name="location" style="color: gray;"></ion-icon><span style="font-size: 100%;">&nbsp; Cabangan, Zambales</span>
-    <!-- <h2 style="font-family: OpenSans; font-size: 100%;">Edit</h2> -->
+    <h7>Cabangan, Zambales</h7>
   </div>
 
-  <div class="text-center">
-  <ion-chip outline color="primary" (click)="favorites();">
-    <!-- <ion-icon name="heart"></ion-icon> -->
-    <ion-label >Favorites</ion-label>
-  </ion-chip>
-</div>
+  <div class="ion-padding text-center">
+    <ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+      <ion-segment-button value="first" checked>
+        Booking
+      </ion-segment-button>
+      <ion-segment-button value="second">
+        Favorites
+      </ion-segment-button>
+      <ion-segment-button value="third">
+        Edit Profile
+      </ion-segment-button>
+      <ion-segment-button value="fourth">
+        History
+      </ion-segment-button>
+    </ion-segment>
 
-  <div class="payment">
-    <ion-item>
-      <h2 style="font-size: 125%;">Profile</h2>
-    </ion-item>
+    <div [ngSwitch]="type">
 
-    <ion-list>
-    <ion-item>
-      <ion-label position="stacked" style="font-size: 140%;">Name</ion-label>
-      <ion-input placeholder="Name"></ion-input>
-      <span slot="end" class="edit">Edit</span>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" style="font-size: 140%;">Address</ion-label>
-      <ion-input placeholder="Address" ></ion-input>
-      <span slot="end" class="edit">Edit</span>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" style="font-size: 140%;">Birthdate</ion-label>
-      <ion-input placeholder="Birthdate"></ion-input>
-      <span slot="end" class="edit">Edit</span>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" style="font-size: 140%;">Phone Number</ion-label>
-      <ion-input placeholder="Phone Number"></ion-input>
-      <span slot="end" class="edit">Edit</span>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" style="font-size: 140%;">Email</ion-label>
-      <ion-input placeholder="Email"></ion-input>
-      <span slot="end" class="edit">Edit</span>
-    </ion-item>
-  </ion-list>
-
+      <div class="payment" *ngSwitchCase="'first'">
     
-  <ion-grid>
-    <ion-row>
-        <ion-col size-sm="6" size="6" class="ion-text-center">
-            <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width" color="dark">Save</ion-button>
-        </ion-col>
+        <div class="text-center">
+          <ion-grid>
+            <ion-row>
+              <ion-col *ngFor="let item of booking">
+                <ion-card class="shadow-normal card-primary" class="driver_item" [routerLink]="['/booking']">
+                  <div class="ribbon ribbon-top-right"><span>{{ item.status }}</span></div>
+                  <ion-card-header>
+                    <img class="car_pic" src="../../assets/car-img/mazda3.png">
+                  </ion-card-header>
+                  <ion-card-content>
+                    <p class="carname">{{ item.carname }}</p>
+                  </ion-card-content>
+                  <ion-button color="danger" class="cancel"><ion-icon name="close-circle-outline"></ion-icon>Cancel</ion-button>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </div>
+      
+      </div>
 
-        <ion-col size-sm="6" size="6" class="ion-text-center">
-            <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width text-dark"  fill="clear">Clear</ion-button>
-        </ion-col>
-    </ion-row>
-</ion-grid>
-  </div>
-
-  <div class="payment">
-    <ion-item>
-      <h2 style="font-size: 125%;">Verification</h2>
-    </ion-item>
-
-    <div class="trans">
-      <ion-list>
+      <div class="payment" *ngSwitchCase="'second'">
+    
+        <div class="text-center">
+          <ion-grid>
+            <ion-row>
+              <ion-col *ngFor="let item of favorites">
+                <ion-card class="shadow-normal card-primary" class="driver_item" [routerLink]="['/view-car']">
+                  <ion-card-header>
+                    <ion-icon class="float-right" name="heart" color="danger" size="large"></ion-icon>
+                    <img src="../../assets/car-img/ford_ranger.png">
+                  </ion-card-header>
+                  <ion-card-content>
+                    <p class="carname">{{ item.carname }}</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </div>
+      
+      </div>
+      
+      <div class="payment" *ngSwitchCase="'third'">
+    
+        <ion-list>
         <ion-item>
-          <ion-label><a href="" style="color: black;">Verify ID</a></ion-label>
+          <ion-label position="stacked" style="font-size: 140%;">Name</ion-label>
+          <ion-input placeholder="Name"></ion-input>
+          <span slot="end" class="edit">Edit</span>
         </ion-item>
         <ion-item>
-          <ion-label><a href="" style="color: black;">Verify Email</a></ion-label>
+          <ion-label position="stacked" style="font-size: 140%;">Address</ion-label>
+          <ion-input placeholder="Address" ></ion-input>
+          <span slot="end" class="edit">Edit</span>
         </ion-item>
         <ion-item>
-          <ion-label><a href="" style="color: black;"> Verify 09982115529</a></ion-label>
+          <ion-label position="stacked" style="font-size: 140%;">Birthdate</ion-label>
+          <ion-input placeholder="Birthdate"></ion-input>
+          <span slot="end" class="edit">Edit</span>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="font-size: 140%;">Phone Number</ion-label>
+          <ion-input placeholder="Phone Number"></ion-input>
+          <span slot="end" class="edit">Edit</span>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="font-size: 140%;">Email</ion-label>
+          <ion-input placeholder="Email"></ion-input>
+          <span slot="end" class="edit">Edit</span>
         </ion-item>
       </ion-list>
-
-      <center>
-        <button (click)="logout();" class="btn" id="logout-button">Logout</button>
-      </center>
-      
-    </div>
-
     
-  </div>
+        
+      <ion-grid>
+        <ion-row>
+            <ion-col size-sm="6" size="6" class="ion-text-center">
+                <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width" color="dark">Save</ion-button>
+            </ion-col>
+    
+            <ion-col size-sm="6" size="6" class="ion-text-center">
+                <ion-button expand="full" shape="round" class="ion-text-wrap min-max-width text-dark"  fill="clear">Clear</ion-button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+
+          <ion-item>
+            <h2 style="font-size: 125%;">Verification</h2>
+          </ion-item>
+      
+          <div class="trans">
+            <ion-list>
+              <ion-item>
+                <ion-label><a href="" style="color: black;">Verify ID</a></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><a href="" style="color: black;">Verify Email</a></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><a href="" style="color: black;"> Verify 09982115529</a></ion-label>
+              </ion-item>
+            </ion-list>
+            
+          </div>
+      
+        </div>
+
+
+        <div class="payment" *ngSwitchCase="'fourth'">
+    
+          <div class="text-center">
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let item of history">
+                  <ion-card class="shadow-normal card-primary" class="driver_item" [routerLink]="['/view-car']">
+                    <!-- <div class="ribbon ribbon-top-right"><span>{{ item.status }}</span></div> -->
+                    <ion-card-header>
+                      <img class="car_pic" src="../../assets/car-img/mazda3.png">
+                    </ion-card-header>
+                    <ion-card-content>
+                      <h7 class="carname">{{ item.carname }}</h7>
+                      <p class="price">{{ item.price }}</p>
+                    </ion-card-content>
+                    <ion-button color="dark" class="cancel">Rent Again</ion-button>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </div>
+        
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- <div class="text-center">
+    <ion-chip outline color="primary" (click)="favorites();">
+      <ion-label >Favorites</ion-label>
+    </ion-chip>
+  </div> -->
+
+
 
 
 </ion-content>

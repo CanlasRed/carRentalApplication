@@ -44,45 +44,28 @@
 
   <div class="ion-padding text-left" id="textarea">
     <ion-item class="input-format">
-      <ion-textarea class="review" placeholder="Share your experience and help others make better choices!"></ion-textarea>
+      <ion-textarea [(ngModel)]="taskName" class="review" placeholder="Share your experience and help others make better choices!"></ion-textarea>
     </ion-item>
   </div>
 
-  <div class="card-body" >
-    <ion-button (click)="review();" expand="full" shape="round" color="dark" class="btn_book">
-    Submit</ion-button>
-    </div>
 
-  <!-- <div class="ion-padding ">
-    <ion-slides [options]="sliderBrands" class="type">  
 
-      <ion-slide>  
-        <ion-chip outline color="dark">
-          <ion-label>Excellent car</ion-label>
-        </ion-chip>
-      </ion-slide>
+  <div>
+    <ion-slides [options]="sliderBrands" class="type ion-padding">  
 
-      <ion-slide>
-        <ion-chip outline color="dark">
-          <ion-label>Accommodating</ion-label>
-        </ion-chip>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-chip outline color="dark">
-          <ion-label>Graaappeee</ion-label>
-        </ion-chip>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-chip outline color="dark">
-          <ion-label>Will book again</ion-label>
-        </ion-chip>
-      </ion-slide>
+        <ion-slide >
+          <ion-chip outline color="dark" *ngFor="let item of rate">
+            <ion-label>{{ item.adjective }}</ion-label>
+          </ion-chip>
+        </ion-slide>
 
     </ion-slides>
-  </div> -->
+  </div>
 
 
+  <div class="card-body" >
+    <ion-button (click)="presentToast();" expand="full" shape="round" color="dark" class="btn_book">
+    Submit</ion-button>
+    </div>
 
 </ion-content>

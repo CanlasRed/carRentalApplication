@@ -11,6 +11,29 @@ import { AlertController } from '@ionic/angular';
 })
 export class ViewDriverPage implements OnInit {
 
+  types = [{
+    type: 'Sedan',
+  },
+  {
+    type: 'SUV',
+  },
+];
+
+  transmission = [{
+    type: 'Manual',
+},
+];
+
+  contact = [{
+    number: '09982115529',
+},
+];
+
+address = [{
+  location: 'San Antonio, Cabangan, Zambales',
+},
+];
+
   constructor(private modalCtrl: ModalController, 
               private router: Router, 
               public alertController: AlertController) { }

@@ -26,6 +26,25 @@ export class Tab1Page {
     speed: 400
   }
 
+  available = [{
+    carname: 'Ford Ranger Wildtrak',
+    price: '₱ 200/hr',
+    seats: '4'
+  },
+  {
+    carname: 'Ford Ranger Wildtrak',
+    price: '₱ 200/hr',
+    seats: '4'
+  },
+];
+
+recommended = [{
+  carname: 'Ford Ranger Wildtrak',
+  price: '₱ 200/hr',
+  seats: '4'
+},
+];
+
   
 
   constructor(private modalCtrl: ModalController) {}

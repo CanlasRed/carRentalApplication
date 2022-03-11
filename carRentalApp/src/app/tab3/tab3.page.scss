@@ -55,17 +55,17 @@ ion-content{
 }
 
 .driver_list{
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 5%;
     max-height: fit-content;
 }
 
 .btn_details{
-    margin-top: 60px;
-    height: 50px;
-    width: 70px;
-    --border-radius: 20px 0px 20px 0px;
-    //margin-right: -50px;
+    margin-top: 8px;
+    height: 40px;
+    width: 48px;
+    --border-radius: 10px;
+    margin-right: 10px;
 }
 
 .driver_item{
@@ -73,3 +73,18 @@ ion-content{
   --inner-padding-end: 0px;
 }
 
+.address{
+    font-size: 13px;
+    margin-top: -15%;
+    color: green;
+}
+
+.drivername{
+    font-size: 15px;
+    color: black;
+    margin-bottom: -0rem;
+}
+
+.checked {
+    color: orange;
+}

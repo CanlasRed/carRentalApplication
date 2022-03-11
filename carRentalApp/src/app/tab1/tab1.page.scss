@@ -67,9 +67,10 @@ ion-item{
  .text{
    display: inline-block;
    vertical-align: middle;
-   font-size: 12px;
+   font-size: 13px;
    margin-left: 3%;
    margin-right: 10%;
+   color: black;
  }
 
 p{
@@ -95,7 +96,11 @@ p{
 }
 
 .price{
-  margin-top: 5%;
+  margin-left: 0%;
+  margin-top: 2%;
+  font-size: 13px;
+  color: black;
+  font-weight: normal;
 }
 
 .payment{
@@ -118,14 +123,81 @@ p{
 }
 
 .btn_details{
-  margin-top: -50px;
-  height: 40px;
-  width: 40px;
-  --border-radius: 20px 0px 20px 0px;
-  margin-right: -15px;
-  font-size: 15px;
+  margin-top: -22px;
+  height: 44px;
+  width: 52px;
+  --border-radius: 10px;
+  margin-right: 0px;
+
 }
 
 .checked {
   color: orange;
+}
+
+.car_pic{
+  max-width: 100%;
+}
+
+.carname{
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.driver{
+  margin-left: -5%;
+}
+
+/* common */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #000000;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 200px;
+  padding: 10px 0;
+  background-color: #000000;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 600 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* top right*/
+.ribbon-top-right {
+  top: -23px;
+  right: -48px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
 }

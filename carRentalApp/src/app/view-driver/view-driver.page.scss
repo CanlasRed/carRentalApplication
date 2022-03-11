@@ -12,8 +12,8 @@ ion-content{
 }
         
         .avatar {
-            width: 160px;
-            height: 160px;
+            width: 95px;
+            height: 95px;
             position: relative;
             margin: 0 auto;
             margin-top: -45px;
@@ -23,7 +23,7 @@ ion-content{
                 border-radius: 50%;
                 position: absolute;
                 bottom: calc(-1*(80px + 4px));
-                border: 6px solid black;
+                // border: 6px solid black;
                 background-color: white;
             }
         }
@@ -102,3 +102,29 @@ ion-card{
     position: relative;
     overflow: hidden;
   }
+
+#desc{
+    font-size: 12px;
+}
+
+.info{
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.info_type{
+    color: black;
+    font-size: 12px;
+}
+
+.rate_class{
+    color: black;
+    font-size: 13px;
+}
+
+.rate{
+    color: black;
+    font-size: 15px;
+    font-weight: medium;
+}

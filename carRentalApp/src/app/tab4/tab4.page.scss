@@ -21,10 +21,21 @@ ion-item{
     --inner-border-width: 0;
 }
 
+ion-segment-button {
+    --indicator-box-shadow: transparent !important;
+    --background:white;
+    --color:black;
+    --background-checked: black!important;
+    --color-checked: white;
+    border-radius: 30rem !important;
+    margin: 0%;
+    font-size: 12px;
+}
+
 .rounded{
     border-radius: 100% !important;
     max-width: 30%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
@@ -65,9 +76,87 @@ ion-item{
     margin-bottom: 25%;
 }
 
-#logout-button {
-    background: red !important;
-    color: white;
-    width: 90%;
-    border-radius: 5rem;
+.location{
+    margin-top: -5%;
+}
+
+.driver_item{
+    border-radius: 20px;
+    margin-top: 5%;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}
+
+.car_pic{
+    margin-top: 15%;
+}
+
+.ribbon {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .ribbon::before,
+  .ribbon::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 5px solid #ffc107;
+  }
+  .ribbon span {
+    position: absolute;
+    display: block;
+    width: 180px;
+    padding: 6px 0;
+    background-color: #ffc107;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #fff;
+    font: 700 10px/1 'Poppins', sans-serif;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ribbon-top-right {
+    top: -10px;
+    right: -10px;
+  }
+  .ribbon-top-right::before,
+  .ribbon-top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  .ribbon-top-right::before {
+    top: 0;
+    left: 0;
+  }
+  .ribbon-top-right::after {
+    bottom: 0;
+    right: 0;
+  }
+  .ribbon-top-right span {
+    left: -25px;
+    top: 30px;
+    transform: rotate(45deg);
+  }
+
+.cancel{
+  margin-top: -5%;
+  margin-bottom: 10%;
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+}
+
+.carname{
+  color: black;
+  font-weight: bold;
+}
+
+.price{
+  color: black;
+  font-weight: normal;
 }

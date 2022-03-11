@@ -24,7 +24,7 @@
       <ion-chip class="float-right" color="success">
         <ion-label>Great Deal</ion-label>
       </ion-chip>
-      <ion-chip >
+      <ion-chip>
         <ion-label><span class="fa fa-star checked"></span> 4.5</ion-label>
       </ion-chip>
     </h2>
@@ -41,12 +41,9 @@
         Car
       </ion-segment-button>
       <ion-segment-button value="third">
-        Pick Up & Drop Off
-      </ion-segment-button>
-      <ion-segment-button value="fourth">
         Safety
       </ion-segment-button>
-      <ion-segment-button value="fifth">
+      <ion-segment-button value="fourth">
         Reviews
       </ion-segment-button>
     </ion-segment>
@@ -130,9 +127,9 @@
         </ion-card>
 
         <div class="card-body" >
-          <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+          <ion-button (click)="book()" expand="full" shape="round" color="dark" class="btn_book">
             <ion-chip outline color="light">
-            <ion-label>₱ 3,000/a day</ion-label>
+            <ion-label>₱ 200/hr</ion-label>
           </ion-chip>
           Book Now</ion-button>
           </div>
@@ -173,80 +170,18 @@
       </ion-item>
 
       <div class="card-body" >
-        <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+        <ion-button (click)="book()" expand="full" shape="round" color="dark" class="btn_book">
           <ion-chip outline color="light">
-          <ion-label>₱ 3,000/a day</ion-label>
+          <ion-label>₱ 200/hr</ion-label>
         </ion-chip>
         Book Now</ion-button>
         </div>
 
   </div>
   
-    <div *ngSwitchCase="'third'" class="ion-padding text-left">
-
-      <ion-item class="input-format">
-        <ion-label style="font-size: 15px;">Pick-up date</ion-label>
-        <ion-input value="{{ date | date: 'MMMM, dd, yyyy ' }}" id="date" class="ion-text-end"></ion-input>
-        <ion-icon name="calendar" color="dark"></ion-icon>
-        <ion-popover trigger="date" size="cover">
-          <ng-template>
-            <ion-datetime presentation="date" [(ngModel)]="date" ></ion-datetime>
-          </ng-template>
-        </ion-popover>
-      </ion-item>
-
-      <ion-item class="input-format">
-        <ion-label style="font-size: 15px;">Location</ion-label>
-        <ion-input class="ion-text-end"></ion-input>
-        <ion-icon name="location" color="dark"></ion-icon>
-      </ion-item>
-
-      <br>
-
-      <ion-item class="input-format">
-        <ion-label style="font-size: 15px;">Drop-off date</ion-label>
-        <ion-input value="{{ date | date: 'MMMM, dd, yyyy ' }}" id="date1" class="ion-text-end"></ion-input>
-        <ion-icon name="calendar" color="dark"></ion-icon>
-        <ion-popover trigger="date1" size="cover">
-          <ng-template>
-            <ion-datetime presentation="date1" [(ngModel)]="date1" ></ion-datetime>
-          </ng-template>
-        </ion-popover>
-      </ion-item>
-
-      <ion-item class="input-format">
-        <ion-label style="font-size: 15px;">Location</ion-label>
-        <ion-input class="ion-text-end"></ion-input>
-        <ion-icon name="location" color="dark"></ion-icon>
-      </ion-item>
 
 
-
-<!-- 
-          <ion-item class="input-format">
-            <ion-label position="stacked">From</ion-label>
-            <ion-input placeholder=" Pick-up Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
-            <ion-input placeholder=" Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
-          </ion-item>
-          
-          <ion-item class="date2 input-format">
-            <ion-label position="stacked">To</ion-label>
-            <ion-input placeholder=" Drop-off Date" style="font-size: 12px;"><ion-icon name="calendar"></ion-icon></ion-input>
-            <ion-input placeholder=" Location" style="font-size: 12px;"><ion-icon name="location"></ion-icon></ion-input>
-          </ion-item> -->
-
-    </div>
-
-    <div class="card-body" *ngSwitchCase="'third'">
-      <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
-        <ion-chip outline color="light">
-        <ion-label>₱ 3,000/a day</ion-label>
-      </ion-chip>
-      Book Now</ion-button>
-    </div>
-
-
-    <div class="text-left car_details" *ngSwitchCase="'fourth'">
+    <div class="text-left car_details" *ngSwitchCase="'third'">
       <h5 style="color: black;">Cleaning and safety practices:</h5>
 
         <ion-item>
@@ -275,16 +210,16 @@
         </ion-item>
 
         <div class="card-body" >
-          <ion-button (click)="presentModal()" expand="full" shape="round" color="dark" class="btn_book">
+          <ion-button (click)="book()" expand="full" shape="round" color="dark" class="btn_book">
             <ion-chip outline color="light">
-            <ion-label>₱ 3,000/a day</ion-label>
+            <ion-label>₱ 200/hr</ion-label>
           </ion-chip>
           Book Now</ion-button>
           </div>
 
     </div>
 
-      <div *ngSwitchCase="'fifth'" class="rate">
+      <div *ngSwitchCase="'fourth'" class="rate">
         <h2>4.5
           <span class="fa fa-star checked1"></span>
           <span class="fa fa-star checked1"></span>
@@ -296,19 +231,24 @@
           <ion-label>1 Review</ion-label>
         </ion-chip>
 
-        <ion-card class="reviews">
+        <ion-card class="reviews" *ngFor="let item of client">
         <ion-item>
           <ion-avatar slot="start">
             <img src="../../assets/driver-pic/Vignettes-willie.jpg" />
           </ion-avatar>
           <ion-label>
-            <h6>Finn</h6>
+            <p class="client">{{ item.name }}</p>
             <span class="fa fa-star checked1"></span>
             <span class="fa fa-star checked1"></span>
             <span class="fa fa-star checked1"></span>
             <span class="fa fa-star checked1"></span>
             <span class="fa fa-star "></span>
-            <p>Listen, I've had a pretty messed up day...</p>
+            <br>
+            <h7 class="desc">{{ item.desc }}</h7>
+            <br>
+            <ion-chip class="adjective" size="large">
+              <ion-label>{{ item.adjective }}</ion-label>
+            </ion-chip>
           </ion-label>
         </ion-item>
       </ion-card>

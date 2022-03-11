@@ -8,9 +8,12 @@ import { ViewCarPageRoutingModule } from './view-car-routing.module';
 
 import { ViewCarPage } from './view-car.page';
 
+import { MbscModule } from '@mobiscroll/angular';
+
 @NgModule({
   imports: [
     CommonModule,
+    MbscModule,
     FormsModule,
     IonicModule,
     ViewCarPageRoutingModule

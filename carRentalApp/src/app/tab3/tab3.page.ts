@@ -26,6 +26,23 @@ export class Tab3Page {
     speed: 400
   }
   
+  driver = [{
+    drivername: 'John Doe',
+    status: 'Available Now',
+  },
+  {
+    drivername: 'Aldrin Villalobos',
+    status: 'Available Now',
+  },
+  {
+    drivername: 'Justin Red Canlas',
+    status: 'Available Now',
+  },
+  {
+    drivername: 'Jefferson Jacobo',
+    status: 'Available Now',
+  },
+];
 
   constructor(private modalCtrl: ModalController) {}
 
@@ -33,7 +50,7 @@ export class Tab3Page {
     const modal = await this.modalCtrl.create({
       component: ViewDriverPage,
       breakpoints: [0, 0.3, 0.5, 0.8],
-      initialBreakpoint: 0.97,
+      initialBreakpoint: 1,
     });
     await modal.present();
   }
